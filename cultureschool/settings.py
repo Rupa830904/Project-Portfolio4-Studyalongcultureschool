@@ -35,7 +35,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-rupa830904-projectportf-x188gwodkfc.ws-eu102.gitpod.io','cultureschool.herokuapp.com','localhost']
+ALLOWED_HOSTS = ['8000-rupa830904-projectportf-x188gwodkfc.ws-eu102.gitpod.io','cultureschool.herokuapp.com','localhost','cultureschool-1a3ff85c7080.herokuapp.com']
 
 
 # Application definition
