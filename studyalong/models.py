@@ -7,7 +7,7 @@ from cloudinary.models import CloudinaryField
 class Course(models.Model):
     title = models.CharField(max_length=100, unique=True)
     slug = models.SlugField(max_length=100, unique=True)
-    featured_image = CloudinaryField('image', default='placeholder')
+    course_image = CloudinaryField('image', default='placeholder')
     #excerpt = models.TextField(blank=True)
     #updated_on = models.DateTimeField(auto_now=True,)
     content = models.TextField()
