@@ -15,12 +15,12 @@
                             <div class="image-container">
                                 {% if "placeholder" in course.featured_image.url %}
                                 <img class="card-img-top"
-                                    src="https://res.cloudinary.com/dmdnckqzb/image/upload/v1690552020/culture-school/bharatnatyam-dance.jpg">
+                                    src="https://res.cloudinary.com/dmdnckqzb/image/upload/v1689636253/samples/landscapes/nature-mountains.jpg">
                                 {% else %}
                                 <img class="card-img-top" src=" {{ course.featured_image.url }}">
                                 {% endif %}
                                 <div class="image-flash">
-                                    <p class="startdate">Start_Date: {{ course.starting_on }}</p>
+                                    <span class="blue-o">{{ course.title }}</span><p class="startdate">Start_Date: {{ course.starting_on }}</p>
                                 </div>
                             </div>
                         </div>

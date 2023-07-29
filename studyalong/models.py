@@ -9,7 +9,7 @@ class Course(models.Model):
     slug = models.SlugField(max_length=100, unique=True)
     featured_image = CloudinaryField('image', default='placeholder')
     #excerpt = models.TextField(blank=True)
-    #updated_on = models.DateTimeField(auto_now=True)
+    #updated_on = models.DateTimeField(auto_now=True,)
     content = models.TextField()
     starting_on = models.DateField(null=True)
     #status = models.IntegerField(choices=STATUS, default=0)
