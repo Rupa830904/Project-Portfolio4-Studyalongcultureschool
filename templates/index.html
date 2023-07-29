@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row">
+
+        <!-- Blog Entries Column -->
+        <div class="col-12 mt-3 left">
+            <div class="row">
+                {% for course in course_list %}
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="image-container">
+                                {% if "placeholder" in course.featured_image.url %}
+                                <img class="card-img-top"
+                                    src="https://res.cloudinary.com/dmdnckqzb/image/upload/v1690552020/culture-school/bharatnatyam-dance.jpg">
+                                {% else %}
+                                <img class="card-img-top" src=" {{ course.featured_image.url }}">
+                                {% endif %}
+                                <div class="image-flash">
+                                    <p class="startdate">Start_Date: {{ course.starting_on }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% if forloop.counter|divisibleby:3 %}
+            </div>
+            <div class="row">
+                {% endif %}
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{%endblock%}
