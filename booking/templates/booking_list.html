@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>My Bookings</h1>
+    <table>
+        {% for booking in booking_list %}
+            <tr>
+                    <td>{{ booking.username }}</td><td>{{ booking.course }}</td>
+            </tr>
+        {% empty %}
+        <tr>
+            <td>You have no active bookings</td>
+        </tr>
+        {% endfor%}
+    </table>
+    <a href = "/add">Add an Item</a>
+</body>
+</html>

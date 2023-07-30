@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 # Create your models here.
 
 # Choice fields
-COURSES = ((1, "Indian Classical"), (2, "	Indian Bollywood"), (3, "Yoga Dance"), (4, "Street Dance"), (5, "Ballet Dance"), (6, "Zumba dance"))
+COURSES = (("Indian Classical", "Indian Classical"), ("Indian Bollywood","Indian Bollywood"), ("Yoga Dance","Yoga Dance"), ("Street Dance","Street Dance"), ("Ballet Dance","Ballet Dance"), ("Zumba dance","Zumba dance"))
 
 
 class Booking(models.Model):
@@ -13,7 +13,7 @@ class Booking(models.Model):
         User, on_delete=models.CASCADE, related_name="booking_user")
     booking_name = models.CharField(max_length=25)
     booking_date = models.DateField()
-    course = models.IntegerField(choices=COURSES)
+    course = models.CharField(max_length=30, choices=COURSES)
 
     class Meta:
         """ Order by booking_date """
