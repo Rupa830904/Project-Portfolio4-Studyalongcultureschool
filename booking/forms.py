@@ -7,12 +7,11 @@ class BookingForm(forms.ModelForm):
     """ Form to create a Booking"""
     class Meta:
         model = Booking
-        fields = ['username','booking_name','booking_date','course']
+        fields = ['username','booking_name','course']
 
         #booking_name = forms.CharField(widget=RichTextWidget())
 
         labels = {
-            'booking_name': 'First Name & Last name',
-            'booking_date' : 'Date of Booking',
+            'booking_name': 'Full Name',
             'course' : 'Select the course'
         }
