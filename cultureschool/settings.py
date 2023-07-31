@@ -49,8 +49,10 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
+    'crispy_forms',
+    'crispy_bootstrap4',
     'studyalong',
-    'booking', 
+    'booking',
 ]
 
 MIDDLEWARE = [
@@ -82,6 +84,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'cultureschool.wsgi.application'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 
 # Database
