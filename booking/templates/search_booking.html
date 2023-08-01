@@ -1,13 +1,13 @@
 {% load crispy_forms_tags %}
 
 <div class="container">
-    <form method="POST" enctype="multipart/form-data" class="p-2 form">
+    <form method="GET" enctype="multipart/form-data" class="p-2 form">
         <h1 class="text-center">Create Booking</h1>
         {% csrf_token %}
         {{ form.media }}
-        {{ form| crispy }}
+        {{ form | crispy }}
         <div class="text-center">
-            <button type="submit" class="btn btn-primary mt-2">Book Course</button>
+            <button type="submit" class="btn btn-primary mt-2">Search Bookings</button>
         </div>
     </form>
 </div>

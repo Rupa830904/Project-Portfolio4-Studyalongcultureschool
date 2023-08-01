@@ -11,7 +11,7 @@
     <table>
         {% for booking in booking_list %}
             <tr>
-                    <td>{{ booking.username }}</td><td>{{ booking.course }}</td>
+                    <td>{{ booking.course }}</td><td>booked on {{ booking.booking_date }}</td>
             </tr>
         {% empty %}
         <tr>
@@ -20,5 +20,6 @@
         {% endfor%}
     </table>
     <a href = "{% url 'add_booking' %}">Book a Course</a>
+    <a href = "{% url 'manage_booking' %}">Manage your booking</a>
 </body>
 </html>

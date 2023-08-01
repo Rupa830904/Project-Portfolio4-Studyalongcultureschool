@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from studyalong.models import Course
+from datetime import datetime
 
 # Create your models here.
 
@@ -13,6 +14,7 @@ class Booking(models.Model):
     username = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="booking_user")
     booking_name = models.CharField(max_length=25)
+    personal_number = models.CharField(max_length=10)
     course = models.CharField(max_length=30, choices=COURSES)
 
     class Meta:
