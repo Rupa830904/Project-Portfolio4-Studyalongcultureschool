@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>My Bookings</h1>
-    <table>
+    <!--table>
         {% for booking in booking_list %}
             <tr>
                     <td>{{ booking.course }}</td><td>booked on {{ booking.booking_date }}</td>
@@ -18,8 +18,17 @@
             <td>You have no active bookings</td>
         </tr>
         {% endfor%}
+    </table-->
+    <main class="flex-shrink-0 main-bg">
+        {% block content %}
+        <!-- Content Goes here -->
+        {% endblock content %}
+    </main>
+    <table>
+        <tr>
+          <td><a href = "{% url 'add_booking' %}">Book a Course</a></td>
+          <td><a href = "{% url 'manage_booking' %}">Manage your booking</a><td>
+        </tr>
     </table>
-    <a href = "{% url 'add_booking' %}">Book a Course</a>
-    <a href = "{% url 'manage_booking' %}">Manage your booking</a>
 </body>
 </html>
