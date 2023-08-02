@@ -12,7 +12,7 @@ COURSES = (("Indian Classical", "Indian Classical"), ("Indian Bollywood","Indian
 class Booking(models.Model):
     """ Model to book a course """
     username = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name="booking_user")
+        User, on_delete=models.CASCADE, related_name="booking_user", default = User)
     booking_name = models.CharField(max_length=25)
     personal_number = models.CharField(max_length=10)
     course = models.CharField(max_length=30, choices=COURSES)

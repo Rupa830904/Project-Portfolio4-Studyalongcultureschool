@@ -4,31 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+        type="text/css">
+    <title>Booking</title>
 </head>
 <body>
-    <h1>My Bookings</h1>
-    <!--table>
-        {% for booking in booking_list %}
-            <tr>
-                    <td>{{ booking.course }}</td><td>booked on {{ booking.booking_date }}</td>
-            </tr>
-        {% empty %}
-        <tr>
-            <td>You have no active bookings</td>
-        </tr>
-        {% endfor%}
-    </table-->
+    <h2>Manage your bookings</h2>
     <main class="flex-shrink-0 main-bg">
         {% block content %}
         <!-- Content Goes here -->
         {% endblock content %}
     </main>
-    <table>
-        <tr>
-          <td><a href = "{% url 'add_booking' %}">Book a Course</a></td>
-          <td><a href = "{% url 'manage_booking' %}">Manage your booking</a><td>
-        </tr>
-    </table>
+    <div class="row">
+        <div class="col s12 center-align">
+            <a href="{% url 'add_booking' %}" class="btn-large light-blue darken-2">
+                Book a Course <i class="fas fa-plus-square right"></i>
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12 center-align">
+            <a href="{% url 'manage_booking' %}" class="btn-large light-blue darken-2">
+                Find my booking<i class="fas fa-plus-square right"></i>
+            </a>
+        </div>
+    </div>
 </body>
 </html>
