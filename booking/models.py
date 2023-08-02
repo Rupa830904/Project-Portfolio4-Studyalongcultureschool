@@ -17,6 +17,7 @@ class Booking(models.Model):
     personal_number = models.CharField(max_length=10)
     course = models.CharField(max_length=30, choices=COURSES)
 
+
     class Meta:
         """ Order by booking_date """
         ordering = ['course']

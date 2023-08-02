@@ -11,3 +11,15 @@
         </div>
     </form>
 </div>
+
+<div class="col-12 mt-3 left">
+    <div class="row">
+        {% for booking in booking_list %}
+        <div class="col-md-4">
+
+                    <p>{{ booking.course }} booked by {{ booking.username }} {{ user.get_username }}</p>
+
+        </div>
+        {% endfor %}
+    </div>
+</div>

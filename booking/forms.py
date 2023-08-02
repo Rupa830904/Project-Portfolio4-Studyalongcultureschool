@@ -26,6 +26,6 @@ class BookingForm(forms.ModelForm):
 
         labels = {
             'booking_name': 'Full Name',
-            'course' : 'Select the course',
-            'personal_number' : 'Personal Number'
+            'personal_number' : 'Personal Number',
+            'course' : 'choose the course'
         }

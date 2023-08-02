@@ -35,3 +35,9 @@ class SearchBooking(LoginRequiredMixin, CreateView):
     def form_valid(self, form):
         form.instance.user = self.request.user
         return super(SearchBooking, self).form_valid(form)
+
+class BookingListEdit(generic.ListView):
+    """ Read Booking view """
+    model = Booking
+    queryset = Booking.objects.order_by("-course")
+    template_name = "edit_booking.html"

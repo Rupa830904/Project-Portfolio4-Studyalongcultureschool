@@ -8,9 +8,8 @@ class BookingAdmin(admin.ModelAdmin):
     """ Class to view bookings on admin panel """
     list_display = (
         'username',
-        'booking_name',
-        'course'
+        'course',
     )
     search_fields = ['booking_name']
-    list_filter = ('username','course')
+    list_filter = ('username','booking_name')
     
