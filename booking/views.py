@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect,get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views import generic
-from django.views.generic import CreateView
+from django.views.generic import CreateView, UpdateView
 from .models import Booking
 from .forms import BookingForm, SearchBooking
 from django.contrib.auth.models import User
@@ -11,8 +11,8 @@ from django.contrib.auth.models import User
 class BookingList(generic.ListView):
     """ Read Booking view """
     model = Booking
-    queryset = Booking.objects.order_by("-course")
-    template_name = "booking_list.html"
+    queryset = Booking.objects.order_by("-username")
+    template_name = "booking_detail.html"
 
 class CreateBooking(LoginRequiredMixin, CreateView):
     """ Create Booking View """
@@ -36,8 +36,7 @@ class SearchBooking(LoginRequiredMixin, CreateView):
         form.instance.user = self.request.user
         return super(SearchBooking, self).form_valid(form)
 
-class BookingListEdit(generic.ListView):
-    """ Read Booking view """
+class Booking(generic.ListView):
+    """Booking view """
     model = Booking
-    queryset = Booking.objects.order_by("-course")
-    template_name = "edit_booking.html"
+    template_name = "booking.html"
