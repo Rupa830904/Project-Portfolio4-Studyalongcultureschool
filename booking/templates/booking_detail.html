@@ -23,8 +23,9 @@
         {% if request.user == booking.username %}
         <div class="col-md-4 mt-10 p-1">
 
-                    <p> {{ booking.course }} booked by {{ booking.username }} </p>
+                    <p> {{ booking.course }} booked by {{ booking.username }} on  {{ booked_date }} </p>
                     <a href="{% url 'delete_booking'  booking.id %}" class="btn btn-primary w-25">Delete</a>
+                    <a href="{% url 'edit_booking'  booking.id %}" class="btn btn-primary w-25">Edit</a>
 
         </div>
         {% endif %}

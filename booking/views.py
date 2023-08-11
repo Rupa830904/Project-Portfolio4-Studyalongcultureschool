@@ -25,6 +25,16 @@ class CreateBooking(LoginRequiredMixin, CreateView):
         form.instance.user = self.request.user
         return super(CreateBooking, self).form_valid(form)
 
+class EditBooking(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+    """ Edit a booking """
+    model = Booking
+    template_name = "edit_booking.html"
+    form_class = BookingForm
+    success_url = '/'
+
+    def test_func(self):
+        return self.request.user == self.get_object().username
+
 class DeleteBooking(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     """ Delete a booking """
     model = Booking

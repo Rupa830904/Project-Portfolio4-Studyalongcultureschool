@@ -9,7 +9,8 @@ class BookingAdmin(admin.ModelAdmin):
     list_display = (
         'username',
         'course',
+        'booked_date',
     )
     search_fields = ['booking_name']
-    list_filter = ('username','booking_name')
+    list_filter = ('username','booking_name','booked_date')
     
