@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect,get_object_or_404
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.views import generic
-from django.views.generic import CreateView, UpdateView
+from django.views.generic import CreateView, UpdateView, DeleteView
 from .models import Booking
 from .forms import BookingForm, SearchBooking
 from django.contrib.auth.models import User
@@ -25,16 +25,14 @@ class CreateBooking(LoginRequiredMixin, CreateView):
         form.instance.user = self.request.user
         return super(CreateBooking, self).form_valid(form)
 
-class SearchBooking(LoginRequiredMixin, CreateView):
-    """ Create Search Booking View """
+class DeleteBooking(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+    """ Delete a booking """
     model = Booking
-    form_class = SearchBooking
-    template_name = "search_booking.html"
+    template_name = "booking_confirm_delete.html"
     success_url = '/'
 
-    def form_valid(self, form):
-        form.instance.user = self.request.user
-        return super(SearchBooking, self).form_valid(form)
+    def test_func(self):
+        return self.request.user == self.get_object().username
 
 class Booking(generic.ListView):
     """Booking view """

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% load crispy_forms_tags %}
+
+<div class="container">
+    <h1 class="text-center">Confirm Booking Deletion</h1>
+    <div class="d-flex justify-content-center pt-3"></div>
+      <form method="POST" class="text-center">
+        {% csrf_token %}
+        <p> Are you sure you want delete {{booking.booking_name}}?</p>
+        <input type="submit" value="confirm"  class="btn btn-primary w-25">
+      </form>
+    </div>
+</div>
+
+{%endblock%}
