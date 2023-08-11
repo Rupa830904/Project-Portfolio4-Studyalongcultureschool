@@ -9,7 +9,7 @@ from django.utils.timezone import now
 #Choice fields
 COURSES = (("Indian Classical", "Indian Classical"), ("Indian Bollywood","Indian Bollywood"), ("Yoga Dance","Yoga Dance"), ("Street Dance","Street Dance"), ("Ballet Dance","Ballet Dance"), ("Zumba dance","Zumba dance"))
 DAYS_OF_WEEK = (
-    ('Monday', 'Monday'),
+    (0, 'Monday'),
     (1, 'Tuesday'),
     (2, 'Wednesday'),
     (3, 'Thursday'),

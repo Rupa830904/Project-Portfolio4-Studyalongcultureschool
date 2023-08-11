@@ -7,7 +7,7 @@ from django.utils.timezone import now
 # Create your models here.
 
 DAYS_OF_WEEK = (
-    (0, 'Monday'),
+    ("Monday", "Monday"),
     (1, 'Tuesday'),
     (2, 'Wednesday'),
     (3, 'Thursday'),
