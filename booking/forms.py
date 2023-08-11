@@ -21,7 +21,7 @@ class BookingForm(forms.ModelForm):
     """ Form to create a Booking"""
     class Meta:
         model = Bookcourse
-        fields = ['username','booking_name','course','dob']
+        fields = ['username','booking_name','course','dob','spring_term','autumn_term']
         booking_name = forms.CharField()
         spring_term = forms.CheckboxInput()
         autumn_term = forms.CheckboxInput()
