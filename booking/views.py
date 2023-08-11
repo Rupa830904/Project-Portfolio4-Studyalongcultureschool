@@ -22,7 +22,7 @@ class CreateBooking(LoginRequiredMixin, CreateView):
     success_url = '/'
 
     def form_valid(self, form):
-        form.instance.user = self.request.user
+        form.instance.username = self.request.user
         return super(CreateBooking, self).form_valid(form)
 
 class EditBooking(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
