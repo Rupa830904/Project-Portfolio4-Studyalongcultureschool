@@ -19,13 +19,13 @@
 <div class="col-12 mt-3 left">
     <h4>You are Logged in as {{ user.get_username }} </h4>
     <div class="row">
-        {% for booking in booking_list %}
-        {% if request.user == booking.username %}
+        {% for bookcourse in bookcourse_list %}
+        {% if request.user == bookcourse.username %}
         <div class="col-md-4 mt-10 p-1">
 
-                    <p> {{ booking.course }} booked by {{ booking.username }} on  {{ booked_date }} </p>
-                    <a href="{% url 'delete_booking'  booking.id %}" class="btn btn-primary w-25">Delete</a>
-                    <a href="{% url 'edit_booking'  booking.id %}" class="btn btn-primary w-25">Edit</a>
+                    <p> {{ bookcourse.course }} booked by {{ bookcourse.username }} on  {{ bookcourse.booked_date }} </p>
+                    <a href="{% url 'delete_booking'  bookcourse.id %}" class="btn btn-primary w-25">Delete</a>
+                    <a href="{% url 'edit_booking'  bookcourse.id %}" class="btn btn-primary w-25">Edit</a>
 
         </div>
         {% endif %}

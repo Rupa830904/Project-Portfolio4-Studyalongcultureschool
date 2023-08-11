@@ -2,7 +2,7 @@ from django.shortcuts import render,redirect,get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.views import generic
 from django.views.generic import CreateView, UpdateView, DeleteView
-from .models import Booking
+from .models import Booking, Bookcourse
 from .forms import BookingForm, SearchBooking
 from django.contrib.auth.models import User
 
@@ -10,13 +10,13 @@ from django.contrib.auth.models import User
 
 class BookingList(generic.ListView):
     """ Read Booking view """
-    model = Booking
-    queryset = Booking.objects.order_by("-username")
+    model = Bookcourse
+    queryset = Bookcourse.objects.order_by("-course")
     template_name = "booking_detail.html"
 
 class CreateBooking(LoginRequiredMixin, CreateView):
     """ Create Booking View """
-    model = Booking
+    model = Bookcourse
     form_class = BookingForm
     template_name = "create_booking.html"
     success_url = '/'
@@ -27,7 +27,7 @@ class CreateBooking(LoginRequiredMixin, CreateView):
 
 class EditBooking(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     """ Edit a booking """
-    model = Booking
+    model = Bookcourse
     template_name = "edit_booking.html"
     form_class = BookingForm
     success_url = '/'
@@ -37,7 +37,7 @@ class EditBooking(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
 class DeleteBooking(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     """ Delete a booking """
-    model = Booking
+    model = Bookcourse
     template_name = "booking_confirm_delete.html"
     success_url = '/'
 
@@ -46,5 +46,5 @@ class DeleteBooking(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
 class Booking(generic.ListView):
     """Booking view """
-    model = Booking
+    model = Bookcourse
     template_name = "booking.html"
