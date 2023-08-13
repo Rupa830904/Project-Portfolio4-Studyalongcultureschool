@@ -4,6 +4,20 @@
 
 {% block content %}
 
-
+<div class="masthead">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-md-12 masthead-text">
+                <!-- Post title goes in these h1 tags -->
+                <h1 class="course-title">{{ course.title }}</h1>
+                <!-- Post author goes before the | the post's created date goes after -->
+                <p class="course-startdate">Starting On {{ course.starting_on }} </p>
+                <p class="course-content">{{ course.content }} </p>
+                <p class="course-teacher">Teacher : {{ course.teacher }} </p>
+                <p class="course-place">Place: {{ course.place }} </p>
+            </div>
+        </div>
+    </div>
+</div>
 
 {%endblock%}

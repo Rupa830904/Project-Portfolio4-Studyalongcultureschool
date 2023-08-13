@@ -8,9 +8,9 @@ class Course(models.Model):
     title = models.CharField(max_length=100, unique=True)
     slug = models.SlugField(max_length=100, unique=True)
     course_image = CloudinaryField('image', default='placeholder')
-    #excerpt = models.TextField(blank=True)
-    #updated_on = models.DateTimeField(auto_now=True,)
     content = models.TextField()
+    teacher = models.CharField(max_length=100, default=False)
+    Place = models.CharField(max_length=100, default=False)
     starting_on = models.DateField(null=True)
     #status = models.IntegerField(choices=STATUS, default=0)
 
