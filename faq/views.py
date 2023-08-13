@@ -1,12 +1,19 @@
 from django.shortcuts import render,redirect,get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.views import generic
-from django.views.generic import CreateView, UpdateView, DeleteView
+from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from .models import faq
 from .forms import QuestionForm
 from django.contrib.auth.models import User
 
 # Create your views here.
+
+
+class Faqlist(ListView):
+    """ Create Booking View """
+    model = faq
+    template_name = "faq.html"
+    success_url = '/'
 
 class Postquestion(CreateView):
     """ Create Booking View """
@@ -14,6 +21,3 @@ class Postquestion(CreateView):
     form_class = QuestionForm
     template_name = "create_faq.html"
     success_url = '/'
-
-    def form_valid(self, form):
-        return super(CreateBooking, self).form_valid(form)
