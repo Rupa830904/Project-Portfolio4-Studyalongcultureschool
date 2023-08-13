@@ -6,7 +6,7 @@ class faq(models.Model):
     name = models.CharField(max_length=80)
     email = models.EmailField()
     question = models.TextField()
-    answer = models.TextField()
+    answer = models.TextField(default = "We will get back to you soon")
 
     class Meta:
         ordering = ["-question"]

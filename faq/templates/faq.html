@@ -20,9 +20,13 @@
         
         {% for faq in faq_list %}
         <div class="container">
-            <p class="faq-question">{{ faq.id }} . {{ faq.question }}</p>
-            <p class="faq-answer"> {{ faq.answer }} </p>
+            <p class="faq-question">{{ faq.question }}</p>
+            <p class="faq-answer"> Ans : {{ faq.answer }} </p>
+            {%if user.is_superuser %}
+            <a href="{% url 'ans_faq' faq.id %}" class="btn-small light-blue darken-2">
+            Answer</a>
         </div>
+        {% endif %}
         {% endfor %}
     </main>
     <div class="row">
