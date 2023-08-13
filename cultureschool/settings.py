@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     'crispy_bootstrap4',
     'studyalong',
     'booking',
+    'faq',
 ]
 
 SITE_ID = 1

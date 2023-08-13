@@ -19,18 +19,3 @@ class Course(models.Model):
 
     def __str__(self):
         return self.title
-
-class Interest(models.Model):
-    course = models.ForeignKey(Course, on_delete=models.CASCADE,
-                             related_name="interests")
-    name = models.CharField(max_length=80)
-    email = models.EmailField()
-    body = models.TextField()
-    created_on = models.DateField(null=True)
-    acknowledged = models.BooleanField(default=False)
-
-    class Meta:
-        ordering = ["created_on"]
-
-    def __str__(self):
-        return f"Comment {self.body} by {self.name}"
