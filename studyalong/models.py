@@ -10,7 +10,7 @@ class Course(models.Model):
     course_image = CloudinaryField('image', default='placeholder')
     content = models.TextField()
     teacher = models.CharField(max_length=100, default=False)
-    Place = models.CharField(max_length=100, default=False)
+    place = models.CharField(max_length=100, default=False)
     starting_on = models.DateField(null=True)
     #status = models.IntegerField(choices=STATUS, default=0)
 

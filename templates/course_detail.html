@@ -15,6 +15,9 @@
                 <p class="course-content">{{ course.content }} </p>
                 <p class="course-teacher">Teacher : {{ course.teacher }} </p>
                 <p class="course-place">Place: {{ course.place }} </p>
+                {% if user.is_superuser %}
+                <a href="{% url 'edit_course'  course.slug %}" class="btn btn-primary w-25">Edit</a>
+                {%endif%}
             </div>
         </div>
     </div>
