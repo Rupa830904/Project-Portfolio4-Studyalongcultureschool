@@ -20,11 +20,11 @@ class Postquestion(CreateView):
     model = faq
     form_class = QuestionForm
     template_name = "create_faq.html"
-    success_url = '/'
+    success_url = '/faq/'
 
 class Ansquestion(UpdateView):
     """ Create Booking View """
     model = faq
     form_class = AnswerForm
     template_name = "answer_faq.html"
-    success_url = '/'
+    success_url = '/faq/'

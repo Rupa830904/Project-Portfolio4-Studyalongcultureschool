@@ -35,6 +35,13 @@
             </a>
         </div>
     </div>
+    {% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <strong>  {{ message }} </strong>
+    {% endfor %}
+</ul>
+{% endif %}
 </body>
 </html>
 

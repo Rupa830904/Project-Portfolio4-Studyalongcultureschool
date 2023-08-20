@@ -2,6 +2,7 @@ from django.shortcuts import render,redirect,get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.views import generic
 from django.views.generic import CreateView, UpdateView, DeleteView
+from django.contrib import messages
 from .models import Booking, Bookcourse
 from .forms import BookingForm, SearchBooking
 from django.contrib.auth.models import User
@@ -19,10 +20,14 @@ class CreateBooking(LoginRequiredMixin, CreateView):
     model = Bookcourse
     form_class = BookingForm
     template_name = "create_booking.html"
-    success_url = '/'
+    success_url = '/mybooking/'
 
     def form_valid(self, form):
         form.instance.username = self.request.user
+        messages.success(
+            self.request,
+            'Course Booked Successfully'
+        )
         return super(CreateBooking, self).form_valid(form)
 
 class EditBooking(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
@@ -30,18 +35,26 @@ class EditBooking(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Bookcourse
     template_name = "edit_booking.html"
     form_class = BookingForm
-    success_url = '/'
+    success_url = '/mybooking/'
 
     def test_func(self):
+        messages.success(
+            self.request,
+            'Booking updated Successfully'
+        )
         return self.request.user == self.get_object().username
 
 class DeleteBooking(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     """ Delete a booking """
     model = Bookcourse
     template_name = "booking_confirm_delete.html"
-    success_url = '/'
+    success_url = '/mybooking/'
 
     def test_func(self):
+        messages.success(
+            self.request,
+            'Booking deleted Successfully'
+        )
         return self.request.user == self.get_object().username
 
 class Booking(generic.ListView):
