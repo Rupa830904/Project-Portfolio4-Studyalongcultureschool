@@ -20,11 +20,10 @@
                                 <img class="card-img-top" src=" {{ course.course_image.url }}">
                                 {% endif %}
                                 <div class="image-flash">
-                                    <span class="blue-o">{{ course.title }}</span>
+                                    <strong> {{ course.title }}</strong>
                                     <a href="{% url 'course_detail' course.slug %}" class="course-link">
                                         <p>Click here for details</p>
                                     </a>
-                                    <hr />
                                 </div>
                             </div>
                         </div>
