@@ -36,6 +36,11 @@
                 {% endfor %}
 
             </div>
+            {% if user.is_superuser %}
+            <div class="text-center">
+                <a href="{% url 'add_course' %}" class="btn btn-primary mt-2">Create Course</button> </a>>
+            </div>
+            {% endif %}
         </div>
     </div>
 

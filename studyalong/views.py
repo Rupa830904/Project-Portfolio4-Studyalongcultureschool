@@ -3,7 +3,7 @@ from django.views import generic
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.views.generic import CreateView, UpdateView, DeleteView, DetailView
 from .models import Course
-from .forms import CourseForm
+from .forms import CourseForm, AddcourseForm
 
 # Create your views here.
 
@@ -17,9 +17,16 @@ class CourseDetail(DetailView):
     queryset = Course.objects.order_by("-starting_on")
     template_name = "course_detail.html"
 
-class EditBooking(LoginRequiredMixin, UpdateView):
+class EditCourse(LoginRequiredMixin, UpdateView):
     """ Edit a booking """
     model = Course
     template_name = "edit_course.html"
     form_class = CourseForm
+    success_url = '/'
+
+class AddCourse(LoginRequiredMixin, CreateView):
+    """ Edit a booking """
+    model = Course
+    template_name = "add_course.html"
+    form_class = AddcourseForm
     success_url = '/'
