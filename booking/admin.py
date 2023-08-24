@@ -21,6 +21,7 @@ class BookcourseAdmin(admin.ModelAdmin):
         'username',
         'course',
         'booked_date',
+        'booking_name',
     )
     search_fields = ['booking_name']
     list_filter = ('booking_name','booked_date')
