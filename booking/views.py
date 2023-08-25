@@ -1,3 +1,4 @@
+from datetime import datetime
 from django.shortcuts import render,redirect,get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.views import generic
@@ -7,6 +8,7 @@ from .models import Booking, Bookcourse
 from .forms import BookingForm, SearchBooking
 from django.contrib.auth.models import User
 from django.contrib.messages.views import SuccessMessageMixin
+
 
 # Create your views here.
 
@@ -25,10 +27,36 @@ class CreateBooking(LoginRequiredMixin, CreateView):
 
     def form_valid(self, form):
         form.instance.username = self.request.user
-        messages.success(
+        name = form.cleaned_data['booking_name']
+        course = form.cleaned_data['course']
+        dob = form.cleaned_data['dob']
+        check_booking = Bookcourse.objects.filter(booking_name = name, course = course)
+        check_total = Bookcourse.objects.filter(course = course).count()
+        today = datetime.today()
+        age = int(today.year) - int(dob.year) 
+        if check_booking.exists():
+            messages.success(
+            self.request,
+            'Booking already exists. Please check Manage My Booking'
+            )
+            return super(CreateBooking, self).form_invalid(form)
+        if check_total == 10:
+            messages.success(
+            self.request,
+            'The course is full'
+            )
+            return super(CreateBooking, self).form_invalid(form)
+        if age < 5:
+            messages.success(
+            self.request,
+            'Minimum age is 5'
+            )
+            return super(CreateBooking, self).form_invalid(form)
+        else :
+          messages.success(
             self.request,
             'Course Booked Successfully'
-        )
+          )
         return super(CreateBooking, self).form_valid(form)
 
 class EditBooking(SuccessMessageMixin, LoginRequiredMixin, UserPassesTestMixin, UpdateView):
