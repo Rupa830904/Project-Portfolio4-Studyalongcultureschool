@@ -35,6 +35,18 @@
             </a>
         </div>
     </div>
+    {% if user.is_superuser %}
+    <div class="container">
+    <form  action="{% url 'search_booking' %}" method="GET"  class="p-2 form">
+        <h4 class="text-center">Find a booking</h4>
+        {% csrf_token %}
+        <input class="text-center" type="text" name="q" placeholder="Enter Full Name">
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary mt-2">Find</button>
+        </div>
+    </form>
+</div>
+    {% endif %}
     {% if messages %}
 <ul class="messages">
     {% for message in messages %}

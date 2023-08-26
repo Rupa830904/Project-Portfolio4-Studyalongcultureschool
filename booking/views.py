@@ -1,11 +1,13 @@
 from datetime import datetime
+from django.http import HttpResponse
+from django.template import loader
 from django.shortcuts import render,redirect,get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.views import generic
-from django.views.generic import CreateView, UpdateView, DeleteView
+from django.views.generic import CreateView, UpdateView, DeleteView, ListView
 from django.contrib import messages
 from .models import Booking, Bookcourse
-from .forms import BookingForm, SearchBooking
+from .forms import BookingForm, SearchForm
 from django.contrib.auth.models import User
 from django.contrib.messages.views import SuccessMessageMixin
 
@@ -37,25 +39,25 @@ class CreateBooking(LoginRequiredMixin, CreateView):
         if check_booking.exists():
             messages.success(
             self.request,
-            'Booking already exists. Please check Manage My Booking'
+            f'Booking already exists for {name} in {course} . Please go to MANAGE MY BOOKING'
             )
             return super(CreateBooking, self).form_invalid(form)
         if check_total == 10:
             messages.success(
             self.request,
-            'The course is full'
+            f'The {course} course is full'
             )
             return super(CreateBooking, self).form_invalid(form)
         if age < 5:
             messages.success(
             self.request,
-            'Minimum age is 5'
+            f'Minimum age to join a course is 5.{name} is welcome later'
             )
             return super(CreateBooking, self).form_invalid(form)
         else :
           messages.success(
             self.request,
-            'Course Booked Successfully'
+            'Course Booked Successfully.'
           )
         return super(CreateBooking, self).form_valid(form)
 
@@ -86,3 +88,15 @@ class Booking(generic.ListView):
     """Booking view """
     model = Bookcourse
     template_name = "booking.html"
+
+class SearchBooking(ListView):
+    """Searcg a booking view """
+    model = Bookcourse
+    template_name = "search_booking.html"
+    context_object_name = 'bookinglist'
+
+    def get_queryset(self):
+        query = self.request.GET.get('q')
+        queryset = Bookcourse.objects.filter(booking_name__icontains=query)
+        return  queryset
+

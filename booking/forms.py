@@ -5,17 +5,14 @@ from django.core.exceptions import ValidationError, ObjectDoesNotExist
 from .models import Booking, Bookcourse
 from django.contrib.auth.models import User
 
-class SearchBooking(forms.ModelForm):
-    """ Form to create a Booking"""
+class SearchForm(forms.ModelForm):
+    """ Form to search a Booking"""
     class Meta:
-        model = Booking
+        model = Bookcourse
         fields = ['booking_name']
-
         #booking_name = forms.CharField(widget=RichTextWidget())
-
         labels = {
             'booking_name': 'Full Name'
-            
         }
 
 class BookingForm(forms.ModelForm):
