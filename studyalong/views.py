@@ -1,8 +1,9 @@
 from django.shortcuts import render
 from django.views import generic
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
-from django.views.generic import CreateView, UpdateView, DeleteView, DetailView
+from django.views.generic import CreateView, UpdateView, DeleteView, DetailView, ListView
 from .models import Course
+from booking.models import Bookcourse
 from .forms import CourseForm, AddcourseForm
 
 # Create your views here.
@@ -17,6 +18,7 @@ class CourseDetail(DetailView):
     queryset = Course.objects.order_by("-starting_on")
     template_name = "course_detail.html"
 
+
 class EditCourse(LoginRequiredMixin, UpdateView):
     """ Edit a booking """
     model = Course
@@ -30,3 +32,15 @@ class AddCourse(LoginRequiredMixin, CreateView):
     template_name = "add_course.html"
     form_class = AddcourseForm
     success_url = '/'
+
+class Checkcourse(LoginRequiredMixin, ListView):
+    """Searcg a booking view """
+    model = Bookcourse
+    template_name = "check_course.html"
+    context_object_name = 'place_left'
+
+    def get_queryset(self):
+        item = self.request.GET.get('course')
+        total_booking = Bookcourse.objects.filter(course__icontains=item).count()
+        place_left = 10 - total_booking
+        return  place_left

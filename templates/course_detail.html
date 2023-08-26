@@ -15,11 +15,26 @@
                 <p class="course-content">{{ course.content }} </p>
                 <p class="course-teacher">Teacher : {{ course.teacher }} </p>
                 <p class="course-place">Place: {{ course.place }} </p>
+                <p>Please click the 'Course Button' below to check place availability</p> </p>
+                <form  action="{% url 'check_course'  course.slug %}" method=GET class="p-2 form">
+                {% csrf_token %}
+                  <div class="text-center">
+                    <input type="submit"  class="btn btn-primary mt-2" name="course" value="{{course.title}}" >
+                  </div>
+                </form>
+
                 {% if user.is_superuser %}
                 <a href="{% url 'edit_course'  course.slug %}" class="btn btn-primary w-25">Edit</a>
                 {%endif%}
             </div>
         </div>
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <strong>  {{ message }} </strong>
+            {% endfor %}
+        {% endif %}
+        </ul>
     </div>
 </div>
 

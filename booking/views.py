@@ -97,6 +97,6 @@ class SearchBooking(ListView):
 
     def get_queryset(self):
         query = self.request.GET.get('q')
-        queryset = Bookcourse.objects.filter(booking_name__icontains=query)
+        queryset = Bookcourse.objects.filter(booking_name__icontains=query).order_by("-booked_date")
         return  queryset
 

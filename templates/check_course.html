@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %} Course Detail - {{ course.title }}{%endblock%}
+
+{% block content %}
+
+<div class="container">
+    <h1 class="text-center">Course availability</h1>
+    <div class="d-flex justify-content-center pt-3"></div>
+        <p> {{ place_left }} place  is free. Please go to Bookings to book a course.</p>
+</div>
+
+{%endblock%}

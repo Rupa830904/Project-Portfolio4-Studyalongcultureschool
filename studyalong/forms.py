@@ -30,7 +30,7 @@ class AddcourseForm(forms.ModelForm):
     """ Form to add a course"""
     class Meta:
         model = Course
-        fields = ['title','content','teacher','place','starting_on']
+        fields = ['title','course_image','content','teacher','place','starting_on']
         title = forms.CharField()
         content = forms.CharField()
         place = forms.CharField()
