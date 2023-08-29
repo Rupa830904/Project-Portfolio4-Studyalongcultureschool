@@ -17,7 +17,6 @@
 </div--->
 
 <div class="col-12 mt-3 left">
-    <h4>You are Logged in as {{ user.get_username }} </h4>
     <div class="row">
         {% for bookcourse in bookcourse_list %}
         {% if request.user == bookcourse.username %}

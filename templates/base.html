@@ -63,6 +63,7 @@
     </nav>
 
     <main class="flex-shrink-0 main-bg">
+        <h6>You are Logged in as {{ user.get_username }} </h6>
         {% block content %}
         <!-- Content Goes here -->
         {% endblock content %}
