@@ -46,7 +46,7 @@ class CreateBooking(LoginRequiredMixin, CreateView):
             messages.success(
             self.request,
             f'The {course} course is full'
-            )
+            )     
             return super(CreateBooking, self).form_invalid(form)
         if age < 5:
             messages.success(
@@ -55,9 +55,10 @@ class CreateBooking(LoginRequiredMixin, CreateView):
             )
             return super(CreateBooking, self).form_invalid(form)
         else :
+          obj = Bookcourse.objects.latest('id')
           messages.success(
             self.request,
-            'Course Booked Successfully.'
+            f'{obj} Course Booked Successfully.'
           )
         return super(CreateBooking, self).form_valid(form)
 

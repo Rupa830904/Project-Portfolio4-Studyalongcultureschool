@@ -10,12 +10,12 @@ from .forms import CourseForm, AddcourseForm
 
 class CourseList(generic.ListView):
     model = Course
-    queryset = Course.objects.order_by("-starting_on")
+    queryset = Course.objects.order_by("starting_on")
     template_name = "index.html"
 
 class CourseDetail(DetailView):
     model = Course
-    queryset = Course.objects.order_by("-starting_on")
+    queryset = Course.objects.order_by("starting_on")
     template_name = "course_detail.html"
 
 
