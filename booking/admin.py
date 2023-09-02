@@ -3,6 +3,7 @@ from .models import Booking, Bookcourse
 from django.contrib.auth.models import User
 # Register your models here.
 
+
 @admin.register(Booking)
 class BookingAdmin(admin.ModelAdmin):
     """ Class to view bookings on admin panel """
@@ -12,7 +13,8 @@ class BookingAdmin(admin.ModelAdmin):
         'personal_number',
     )
     search_fields = ['booking_name']
-    list_filter = ('booking_name','booked_date')
+    list_filter = ('booking_name', 'booked_date')
+
 
 @admin.register(Bookcourse)
 class BookcourseAdmin(admin.ModelAdmin):
@@ -24,5 +26,4 @@ class BookcourseAdmin(admin.ModelAdmin):
         'booking_name',
     )
     search_fields = ['booking_name']
-    list_filter = ('booking_name','booked_date')
-    
+    list_filter = ('booking_name', 'booked_date')
