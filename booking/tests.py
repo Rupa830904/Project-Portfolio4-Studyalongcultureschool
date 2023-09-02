@@ -34,17 +34,7 @@ class TestViews(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'search_booking.html')
 
-    def test_delete_booking(self):
-        """ Test booking detail """
-        response = self.client.get('/mybooking/delete/7/')
-        self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'booking_confirm_delete.html')
-
-    def test_edit_booking(self):
-        """ Test booking detail """
-        response = self.client.get('/mybooking/edit/10/')
-        self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'edit_booking.html')
+    
 
 
 
@@ -56,4 +46,12 @@ class TestUnsecuredViews(TestCase):
         response = self.client.get('/mybooking/')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'booking.html')
+    def test_edit_booking(self):
+        """ Test booking detail """
+        response = self.client.get('/mybooking/edit/59/')
+        self.assertEqual(response.status_code, 302)
+    def test_delete_booking(self):
+        """ Test booking detail """
+        response = self.client.get('/mybooking/delete/54/')
+        self.assertEqual(response.status_code, 302)
         

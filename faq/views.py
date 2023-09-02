@@ -1,4 +1,4 @@
-from django.shortcuts import render,redirect,get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.views import generic
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
@@ -15,12 +15,14 @@ class Faqlist(ListView):
     template_name = "faq.html"
     success_url = '/'
 
+
 class Postquestion(CreateView):
     """ Create Booking View """
     model = faq
     form_class = QuestionForm
     template_name = "create_faq.html"
     success_url = '/faq/'
+
 
 class Ansquestion(UpdateView):
     """ Create Booking View """

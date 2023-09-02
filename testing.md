@@ -378,9 +378,6 @@ The django auto generated code for AUTH_PASSWORD_VALIDATORS were showing up as l
 
 ![PEP8](docs/testing/pep8.PNG)
 
-JavaScript code was run through [JSHINT](https://jshint.com) javascript validator. lIt flagged up issues with undefined variables as I jad forgotten to use the let keyword. This was fixed and the only warnings remained were that they were unused variables. The functions were called via onclick from the html elements themselves, so are in fact being used.
-
-![JS validator](docs/testing/javascript.PNG)
 
 
 

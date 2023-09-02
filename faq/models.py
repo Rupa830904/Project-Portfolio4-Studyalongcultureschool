@@ -3,6 +3,7 @@ from django.contrib.auth import get_user_model
 
 # Create your models here.
 
+
 class faq(models.Model):
     name = models.CharField(max_length=80)
     email = models.EmailField()

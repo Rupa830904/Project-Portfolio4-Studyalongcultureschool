@@ -1,15 +1,15 @@
 from django import forms
 from django.forms.widgets import DateInput
 from django.core.exceptions import ValidationError, ObjectDoesNotExist
-#from djrichtextfield.widgets import RichTextWidget
 from .models import faq
 from django.contrib.auth.models import User
+
 
 class QuestionForm(forms.ModelForm):
     """ Form to ask a question"""
     class Meta:
         model = faq
-        fields = ['name','email','question']
+        fields = ['name', 'email', 'question']
         name = forms.CharField()
         email = forms.CharField()
         question = forms.CharField()
@@ -17,8 +17,9 @@ class QuestionForm(forms.ModelForm):
         labels = {
             'name': 'name',
             'email': 'Email',
-            'question' : 'question',
+            'question': 'question',
         }
+
 
 class AnswerForm(forms.ModelForm):
     """ Form to answer a question"""
@@ -28,5 +29,5 @@ class AnswerForm(forms.ModelForm):
         answer = forms.CharField()
 
         labels = {
-            'answer' : 'answer',
+            'answer': 'answer',
         }

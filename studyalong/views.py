@@ -8,10 +8,12 @@ from .forms import CourseForm, AddcourseForm
 
 # Create your views here.
 
+
 class CourseList(generic.ListView):
     model = Course
     queryset = Course.objects.order_by("starting_on")
     template_name = "index.html"
+
 
 class CourseDetail(DetailView):
     model = Course
@@ -26,12 +28,14 @@ class EditCourse(LoginRequiredMixin, UpdateView):
     form_class = CourseForm
     success_url = '/'
 
+
 class AddCourse(LoginRequiredMixin, CreateView):
     """ Edit a booking """
     model = Course
     template_name = "add_course.html"
     form_class = AddcourseForm
     success_url = '/'
+
 
 class Checkcourse(LoginRequiredMixin, ListView):
     """Searcg a booking view """
@@ -43,4 +47,4 @@ class Checkcourse(LoginRequiredMixin, ListView):
         item = self.request.GET.get('course')
         total_booking = Bookcourse.objects.filter(course__icontains=item).count()
         place_left = 10 - total_booking
-        return  place_left
+        return place_left

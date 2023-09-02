@@ -3,6 +3,7 @@ from .models import faq
 from django.contrib.auth.models import User
 # Register your models here.
 
+
 @admin.register(faq)
 class faqAdmin(admin.ModelAdmin):
     """ Class to view bookings on admin panel """
@@ -12,6 +13,6 @@ class faqAdmin(admin.ModelAdmin):
         'answer',
     )
     search_fields = ['name']
-    list_filter = ('name','email')
+    list_filter = ('name', 'email')
 
 # Register your models here.

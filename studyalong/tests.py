@@ -4,6 +4,7 @@ from .models import Course
 
 # Create your tests here.
 
+
 class TestViews(TestCase):
     """
     Test cases for menu app as logged in user
@@ -32,11 +33,19 @@ class TestViews(TestCase):
         """ Test redirect on create course """
         response = self.client.get('/course/')
         self.assertEqual(response.status_code, 200)
-  
-    
-    
 
-    
+    def test_check_course(self):
+        """ Test redirect on create course """
+        response = self.client.get('/check-course/3?course=Street Dance')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'check_course.html')
+
+    def test_course_detail(self):
+        """ Test redirect on course detail """
+        response = self.client.get('/details/1')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'course_detail.html')
+
 
 class TestRedirectViews(TestCase):
     """
@@ -47,17 +56,3 @@ class TestRedirectViews(TestCase):
         """ Test redirect on create course """
         response = self.client.get('/edit/1')
         self.assertEqual(response.status_code, 302)
-
-    def test_check_course(self):
-        """ Test redirect on create course """
-        response = self.client.get('/check-course/?item=Street Dance')
-        self.assertEqual(response.status_code, 302)
-    
-    def test_course_detail(self):
-        """ Test redirect on course detail """
-        response = self.client.get('/details/1')
-        self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'index.html')
-
-  
-

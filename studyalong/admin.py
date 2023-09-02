@@ -1,15 +1,11 @@
 from django.contrib import admin
 from .models import Course
-#from django_summernote.admin import SummernoteModelAdmin
-
 # Register your models here.
 
+
 @admin.register(Course)
-
 class CourseAdmin(admin.ModelAdmin):
-
     list_display = ('title', 'slug', 'starting_on')
     search_fields = ['title', 'content']
-    list_filter = ('title','starting_on')
+    list_filter = ('title', 'starting_on')
     prepopulated_fields = {'slug': ('title',)}
-    #summernote_fields = ('content',)
