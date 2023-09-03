@@ -1,12 +1,12 @@
-# Sizzle and Steak
+# STUDYALONG CULTURESCHOOL
 
-STUDYALONGCULTURESCHOOL is a fictional school located in a small town of Sweden. The app is a school management system designed to allow students and admin to easily manage the courses and bookings. It also provides users with a simple, easy to use booking system where they can view and manage their own bookings.
-The live link can be found here: [Live Site - STUDYALONG CULTURESCHOOL]()
+STUDYALONG CULTURESCHOOL is a fictional school located in a small town of Sweden. The app is a school management system designed to allow students and admin to easily manage the courses and bookings. It also provides users with a simple, easy to use booking system where they can view and manage their own bookings.
+The live link can be found here: [Live Site - STUDYALONG CULTURESCHOOL](https://cultureschool-1a3ff85c7080.herokuapp.com/)
 
 ![Mock Up]()
 
 ## Table of Contents
-- [Sizzle and Steak](#sizzle-and-steak)
+- [STUDYALONG CULTURESCHOOL](#studyalong-cultureschool)
   - [Table of Contents](#table-of-contents)
 - [User-Experience-Design](#user-experience-design)
   - [The-Strategy-Plane](#the-strategy-plane)
@@ -42,9 +42,9 @@ The live link can be found here: [Live Site - STUDYALONG CULTURESCHOOL]()
 
 ### Site-Goals
 
-The site is aimed to help restaurant staff to easily manage the menus displayed on the website, as well as keeping track of upcoming bookings and capacity, editing and deleting as neccessary. 
+The site is aimed to help students and admin to easily manage courses and bookings in the website, as well as keeping track of existing bookings  editing and deleting as neccessary. 
 
-The site also aims to provide customers with a simple, hassle free way to make reservations without the need to call the restaurant. They will also be able to cancel their bookings or update when needed.
+The site also aims to provide informations to visitors abouth the courses , the places left for a course and the detailed information about date , place etc. 
 
 ### Agile Planning
 
@@ -52,7 +52,7 @@ This project was developed using agile methodologies by delivering small feature
 
 All projects were assigned to epics, prioritized under the labels, Must have, should have, nice to have. "Must have" stories were completed first, "should haves" and then finally "nice to haves". It was done this way to ensure that all core requirements were completed first to give the project a complete feel, with the nice to have features being added should there be capacity.
 
-The Kanban board was created using github projects and can be located [here]() and can be viewed to see more information on the project cards. All stories except the documentation tasks have a full set of acceptance criteria in order to define the functionality that marks that story as complete.
+The Kanban board was created using github projects and can be located [here](https://github.com/users/Rupa830904/projects/6) and can be viewed to see more information on the project cards. All stories except the documentation tasks have a full set of acceptance criteria in order to define the functionality that marks that story as complete.
 
 ![Kanban image](docs/readme_images/kanban.PNG)
 
@@ -71,23 +71,23 @@ The stand alone pages epic is for small pages that did not have enough stories t
 
 **EPIC 3 - Course**
 
-The menu epic is for all stories that relate to the creating, deleting, editing and viewing of menus. This allows for regular users to view menus and for staff to manage them with a simple UI interface.
+The course epic is for all stories that relate to the creating, editing and viewing of courses. This allows for regular users to view menus and for admin to manage them with a simple UI interface.
 
 **EPIC 4 - Booking**
 
-The booking epic is for all stories that relate to creating, viewing, updating and deleting bookings. This allows the staff to easily view upcoming bookings, manage the bookings and also for customers to book and manage their own reservations.
+The booking epic is for all stories that relate to creating, viewing, updating and deleting bookings. This allows the users to easily view upcoming bookings, manage the bookings and also for users to book and manage their course bookings. This also allows admin to find any booking for all users and edit or delete if necessary.
 
 **EPIC 5 - FAQ**
 
-The booking epic is for all stories that relate to creating, viewing, updating and deleting bookings. This allows the staff to easily view upcoming bookings, manage the bookings and also for customers to book and manage their own reservations.
+The FAQ epic is for all stories that relate to creating, viewing, updating frequently asked questions. This allows the users to easily ask questions and admins to answer them.
 
 **EPIC 6 - Validation**
 
-The booking epic is for all stories that relate to creating, viewing, updating and deleting bookings. This allows the staff to easily view upcoming bookings, manage the bookings and also for customers to book and manage their own reservations.
+The validation epic is for all stories that checks the user inputs for creating any booking against the rules of the culture school.his allows the school to adhere to booking policies.
 
 **EPIC 7 - Testing**
 
-The booking epic is for all stories that relate to creating, viewing, updating and deleting bookings. This allows the staff to easily view upcoming bookings, manage the bookings and also for customers to book and manage their own reservations.
+The testing epic is for all stories that relate to testing. Like Unit test cases in each app , PEP8 validation, validator testing.
 
 **EPIC 8 - Documentation**
 
@@ -95,17 +95,11 @@ This epic is for all document related stories and tasks that are needed to docum
 
 #### User Stories
 
-The following user stories (by epic) were completed over the 3 sprints:
-
 **EPIC 1 - Base Setup**
 
 As a developer, I need to create the base.html page and structure so that other pages can reuse the layout
 
-As a developer, I need to create static resources so that images, css and javascript work on the website
-
 As a developer, I need to set up the project so that it is ready for implementing the core features
-
-As a developer, I need to create the footer with social media links and contact information
 
 As a developer, I need to create the navbar so that users can navigate the website from any device
 
@@ -117,9 +111,7 @@ As a developer, I need to implement a 500 error page to alert users when an inte
 
 As a developer, I need to implement a 403 error page to redirect unauthorised users to so that I can secure my views
 
-As a restaurant owner, I would like a home page so that customers can view information on my restaurant
-
-**EPIC 3 - Authentication Epic**
+**EPIC 3 - Course**
 
 As a developer, I need to implement allauth so that users can sign up and have access to the websites features
 
@@ -169,10 +161,9 @@ Tasks:
 ## The-Scope-Plane
 
 * Responsive Design - Site should be fully functional on all devices from 320px up
-* Hamburger menu for mobile devices
 * Ability to perform CRUD functionality on Menus and Bookings
-* Restricted role based features
-* Home page with restaurant information
+* Restricted role based features for regular users and admins
+* Home page with courses information
 
 ## The-Structure-Plane
 
@@ -187,7 +178,7 @@ Implementation:
  The Navigation contains links for Home, Bookings, Menus and has allauth options.
 
 The following navigation items are available on all pages:
-  * Home -> index.html - Visible to all
+  * Course -> index.html - Visible to all
   * Bookings (Drop Down):
     * Manage Bookings -> managebookings.html - Visible to logged in users
     * New Booking -> booking.html - Visible to logged in users
