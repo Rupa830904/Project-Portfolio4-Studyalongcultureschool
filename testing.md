@@ -347,7 +347,9 @@ Unit tests were created to test some basic functionality such as templates used 
 
 Results:
 
-![unit tests](docs/testing/unit-test.PNG)
+![unit tests 1]()
+![unit tests 2]()
+![unit tests 3]()
 
 ## Accessibility
 
@@ -364,19 +366,21 @@ Testing was focused to ensure the following criteria were met:
 - Aria properties have been implemented correctly
 - WCAG 2.1 Coding best practices being followed
 
+![WAVE test]()
+
 ## Validator Testing
 
 All pages were run through the [w3 HTML Validator](https://validator.w3.org/). Initially there were some errors due to stray script tags, misuse of headings within spans and some unclosed elements. All of these issues were corrected and all pages passed validation.
 
 Due to the django templating language code used in the HTML files, these could not be copy and pasted into the validator and due to the secured views, pages with login required or a secured view cannot be validated by direct URI. To test the validation on the files, open the page to validate, right click and view page source. Paste the raw html code into the validator as this will be only the HTML rendered code.
 
-![HTML Validator](docs/testing/html.PNG)
+![HTML Validator]()
 
 All pages were run through the official [Pep8](http://pep8online.com/) validator to ensure all code was pep8 compliant. Some errors were shown due to blank spacing and lines too long, 1 line instead of 2 expected. All of these errors were resolved and code passed through validators with the exception of the settings.py file.
 
 The django auto generated code for AUTH_PASSWORD_VALIDATORS were showing up as lines too long. I could not find a way to split these lines but since they were auto generated and not my own custom code, I hope this is acceptable.
 
-![PEP8](docs/testing/pep8.PNG)
+![PEP8]()
 
 
 
@@ -403,11 +407,6 @@ Website behaved as expected.
 
 Website was also opened on the following devices and no responsive issues were seen:
 
-Oukitel C21 Pro
-TCL 30 Pro
-iPhone SE
 
 
 ## Bugs
-
-Logic has been implemented to ensure that when a booking is created that it books the table with the capacity lowest to suit the number of guests. When a user updates a booking, this does not function correctly on the edit and will reassign the booking to another table with the next lowest capacity. It should keep the booking on the current table if it is a lower capacity but unfortunately does not work correctly and has not been resolved in time for submission.

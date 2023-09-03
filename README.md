@@ -174,26 +174,13 @@ Implementation:
 
 **Navigation Menu**
 
- The Navigation contains links for Home, Bookings, Menus and has allauth options.
+The Navigation contains links for Home, Bookings, FAQs and has allauth options.
 
-The following navigation items are available on all pages:
-  * Course -> index.html - Visible to all
-  * Bookings (Drop Down):
-    * Manage Bookings -> managebookings.html - Visible to logged in users
-    * New Booking -> booking.html - Visible to logged in users
-  * Menus (Drop Down):
-    * View Menus -> menus.html - Visible to all
-    * Create Menu -> create_menu.html - Visible to staff
-    * Manage Menus -> managemenus - Visible to staff
-  * Login -> login.html - Visible to logged out users
-  * Register -> signup.html - Visible to logged out users
-  * Logout -> logout.html - Visible to logged in users
-
-The navigation menu is displayed on all pages and drops down into a hamburger menu on smaller devices. This will allow users to view the site from any device and not take up too much space on mobile devices.
+The navigation option is displayed on all pages . This will allow users to view the site from any device and not take up too much space on mobile devices.
 
 ![Navbar](docs/readme_images/navbar.PNG)
 
-``USER STORY - As a restaurant owner, I would like a home page so that customers can view information on my restaurant``
+``USER STORY - As a developer, I need to create the navbar so that users can navigate the website from any device``
 
 Implementation:
 
@@ -392,16 +379,7 @@ The following stories were implemented in order to set up a base structure for a
 
 ``As a developer, I need to create the base.html page and structure so that other pages can reuse the layout``
 
-``As a developer, I need to create static resources so that images, css and javascript work on the website``
-
 ``As a developer, I need to set up the project so that it is ready for implementing the core features``
-
-**Favicon**
-
-A favicon was added the website to enable users to easily locate the website in the browser when multiple tabs are open.
-
-### Features Left To Implement
-- In a future release I would like to implement a page which displays a table map of the restaurant with information displayed on each table of upcoming bookings. This feature would allow staff to easily see if there are any upcoming bookings on the each table and plan accordingly. 
 
 
 
@@ -439,7 +417,7 @@ The Roboto font was used throughout the website. This font is from google fonts 
 
 The Website logo was made using Canva using the Gold colour to match in with the website color scheme.
 
-The course images were taken from googlr.com copyright free images.
+The course images were taken from google.com copyright free images.
 
 
 ## Technolgies
@@ -448,8 +426,6 @@ The course images were taken from googlr.com copyright free images.
   - The structure of the Website was developed using HTML as the main language.
 - CSS
   - The Website was styled using custom CSS in an external file.
-- JavaScript
-  - JavaScript was used to make the custom slider on the menu page change and the bootstrap date picker.
 - Python
   - Python was the main programming language used for the application using the Django Framework.
 - Visual Studio Code
@@ -460,8 +436,6 @@ The course images were taken from googlr.com copyright free images.
   - Used to commit and push code during the development of the Website
 - Font Awesome
   - This was used for various icons throughout the site
-- Favicon.io
-  - favicon files were created at https://favicon.io/favicon-converter/
 - Canva
   - This was used to create the logo in header 
 
@@ -474,29 +448,22 @@ The course images were taken from googlr.com copyright free images.
 
 **External Python Modules**
 
-* cloudinary==1.29.0 - Cloundinary was set up for use but no custom uploads were made, settings remain for future development
-* crispy-bootstrap5==0.6 - This was used to allow bootstrap5 use with crispy forms
-* cryptography==37.0.2 - Installed as dependency with another package
-* defusedxml==0.7.1 - Installed as dependency with another package
+* asgiref==3.7.2 - Allows to wrap a WSGI application so it appears as a valid ASGI application.
+* cloudinary==1.33.0 - Cloundinary was set up for use but no custom uploads were made, settings remain for future development
+* crispy-bootstrap4==2022.1- This was used to allow bootstrap5 use with crispy forms
 * dj-database-url==0.5.0 - Used to parse database url for production environment
 * dj3-cloudinary-storage==0.0.6 - Storage system to work with cloudinary
-* Django==4.0.5 - Framework used to build the application
-* django-admin-rangefilter==0.8.4 - This was used to search bookings in the admin for a range between 2 dates
-* django-allauth==0.51.0 - Used for the sites authentication system, sign up, sign in, logout, password resets ect.
-* django-crispy-forms==1.14.0 - Used to style the forms on render
-* django-model-utils==4.2.0 - Installed as dependency with another package
-* gunicorn==20.1.0 - Installed as dependency with another package
-* idna==3.3 - Installed as dependency with another package
-* oauthlib==3.2.0 - Installed as dependency with another package
-* psycopg2==2.9.3 - Needed for heroku deployment
-* pycparser==2.21 - Installed as dependency with another package
+* Django==3.2.20 - Framework used to build the application
+* django-allauth==0.54.0 - Used for the sites authentication system, sign up, sign in, logout, password resets ect.
+* django-crispy-forms==2.0 - Used to style the forms on render
+* gunicorn==21.2.0 - Installed as dependency with another package
+* oauthlib==3.2.2 - Installed as dependency with another package
+* psycopg2==2.9.6 - Needed for heroku deployment
 * PyJWT==2.4.0 - Installed as dependency with another package
-* python3-openid==3.2.0 - Installed as dependency with another package
-* requests==2.27.1 - Installed as dependency with another package
-* requests-oauthlib==1.3.1 - Installed as dependency with another package (allauth authentication)
-* six==1.16.0 - Installed as dependency with another package
-* sqlparse==0.4.2 - Installed as dependency with another package
-* urllib3==1.26.9 - Installed as dependency with another package
+* python3-openid==3.2.0 - Installed as dependency with another
+* pytz==2023.3 -  This library allows accurate and cross platform timezone calculations
+* requests-oauthlib==1.3.1 -Installed as dependency with another
+* sqlparse==0.4.4 - Installed as dependency with another package
 
 ## Testing
 
