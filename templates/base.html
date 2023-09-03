@@ -1,7 +1,7 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html class="h-100">
+<html lang="en" class="h-100">
 
 <head>
     <title>studyalong</title>
@@ -63,7 +63,7 @@
     </nav>
 
     <main class="flex-shrink-0 main-bg">
-        <h6>You are Logged in as {{ user.get_username }} </h6>
+        <strong>You are Logged in as {{ user.get_username }} </strong>
         {% block content %}
         <!-- Content Goes here -->
         {% endblock content %}
