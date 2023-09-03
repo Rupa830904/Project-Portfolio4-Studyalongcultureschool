@@ -165,7 +165,6 @@ Tasks:
 * Restricted role based features for regular users and admins
 * Home page with courses information
 
-## The-Structure-Plane
 
 ### Features
 
@@ -405,97 +404,23 @@ A favicon was added the website to enable users to easily locate the website in 
 - In a future release I would like to implement a page which displays a table map of the restaurant with information displayed on each table of upcoming bookings. This feature would allow staff to easily see if there are any upcoming bookings on the each table and plan accordingly. 
 
 
-## The-Skeleton-Plane
 
-### Wireframes
-
-- Home page
-
-
-![Home Page](docs/wireframes/home.JPG)
-
-
-- Signup page
-
-
-![Sign up Page](docs/wireframes/register.JPG)
-
-- Log in
-
-![Login Page](docs/wireframes/login.JPG)
-
-- Log Out
-
-![Logout Page](docs/wireframes/logout.JPG)
-
-- Create Booking
-
-![Create Booking](docs/wireframes/create_booking.JPG)
-
-- Edit Booking 
-
-![Edit Booking](docs/wireframes/edit_booking.JPG)
-
-- Manage Bookings
-
-![Manage Bookings](docs/wireframes/manage_booking.JPG)
-
-- Delete Booking 
-
-![Delete Booking](docs/wireframes/delete_booking.JPG)
-
-- Create Menu 
-
-![Create Menu](docs/wireframes/create_menu.JPG)
-
-- Edit Menu 
-
-![Edit Menu](docs/wireframes/edit_menu.JPG)
-
-- View Menu 
-
-![View Menu](docs/wireframes/view_menu.JPG)
-
-
-- Manage Menus
-
-![Manage Menu](docs/wireframes/manage_menus.JPG)
-
-- Delete Menu 
-
-![Delete Menu](docs/wireframes/delete_menu.JPG)
-
-- 404 Error 
-
-![404 Error](docs/wireframes/404.JPG)
-
-- 403 Error 
-
-![403 Error](docs/wireframes/403.JPG)
-
-- 500 Error 
-
-![500 Error](docs/wireframes/500.JPG)
-
-**Differences to Design**
-
-On the menu page, the original wireframe was to display the menus in a complete linear format but on larger screens this caused a lot of un-neccessary white space on smaller items like drinks and sides. A change was made to have the drinks and sides sit side-by-side on larger screens and stack as originally planned on mobiles.
 
 ### Database-Design
 
-The database was designed to allow CRUD functionality to be available to registered users, when signed in. The user model is at the heart of the application as it is connected the the main booking and menu tables, linked by primary/foreign key relationships.
+The database was designed to allow CRUD functionality to be available to registered users, when signed in. The course model is at the heart of the application as it is connected the Bookcourse model, linked by primary/foreign key relationships.The FAQ model is a standalone model providing the Q&A feature to the visitors.
 
 The Menu Items model holds objects that are linked to the Menu Models by a many to many relationship. This allows for staff to create menus with many menu items on.
 
-Bookings are related to the customer (user) by a Foreign Key which allows the users to be able to view and update bookings attached to their accounts.
+Bookings are related to the students (user) by a Foreign Key which allows the users to be able to view and update bookings attached to their accounts.
 
 Entity relationship diagram was created using [DBVisualizer](https://www.dbvis.com/) and shows the schemas for each of the models and how they are related.
 
-![Entity Relationship Diagram](docs/readme_images/erd.JPG)
+![Entity Relationship Diagram]()
 
 ### Security
 
-Views were secured by using the django class based view mixin, UserPassesTextMixin. A test function was created to use the mixin and checks were ran to ensure that the user who is trying to access the page is authorized. Any staff restricted functionality, user edit/delete functionality listed in the features was secured using this method.
+Views were secured by using the django class based view mixin, UserPassesTextMixin. A test function was created to use the mixin and checks were ran to ensure that the user who is trying to access the page is authorized. Any restricted functionality, user edit/delete functionality listed in the features was secured using this method.
 
 Environment variables were stored in an env.py for local development for security purposes to ensure no secret keys, api keys or sensitive information was added the the repository. In production, these variables were added to the heroku config vars within the project.
 
@@ -514,7 +439,7 @@ The Roboto font was used throughout the website. This font is from google fonts 
 
 The Website logo was made using Canva using the Gold colour to match in with the website color scheme.
 
-The hero image was taken from Pexels which is a royalty free image site.
+The course images were taken from googlr.com copyright free images.
 
 
 ## Technolgies
@@ -537,19 +462,15 @@ The hero image was taken from Pexels which is a royalty free image site.
   - This was used for various icons throughout the site
 - Favicon.io
   - favicon files were created at https://favicon.io/favicon-converter/
-- balsamiq
-  - wireframes were created using balsamiq from https://balsamiq.com/wireframes/desktop/#
 - Canva
   - This was used to create the logo in header 
-- TinyPNG
-  - This was used to compress the hero image for optimal load times
 
 **Python Modules Used**
 
-* Django Class based views (ListView, UpdateView, DeleteView, CreateView) - Used for the classes to create, read, update and delete
+* Django Class based views (ListView, UpdateView, DeleteView, , DetailView) - Used for the classes to create, read, update and delete
 * Mixins (LoginRequiredMixin, UserPassesTestMixin) - Used to enforce login required on views and test user is authorized to perform actions
 * messages - Used to pass messages to the toasts to display feedback to the user upon actions
-* timedelta, date - Date was used in order to search for objects by date and timedelta for searching date ranges
+* date - Date was used in order to search for objects by date
 
 **External Python Modules**
 
@@ -575,13 +496,11 @@ The hero image was taken from Pexels which is a royalty free image site.
 * requests-oauthlib==1.3.1 - Installed as dependency with another package (allauth authentication)
 * six==1.16.0 - Installed as dependency with another package
 * sqlparse==0.4.2 - Installed as dependency with another package
-* tzdata==2022.1 - Installed as dependency with another package
 * urllib3==1.26.9 - Installed as dependency with another package
-* whitenoise==6.2.0 - Used to serve static files directly without use of static resource provider like cloundinary
 
 ## Testing
 
-Test cases and results can be found in the [TESTING.md](TESTING.md) file. This was moved due to the size of the file.
+Test cases and results can be found in the [TESTING.md](TESTING.md) file. 
 
 ## Deployment
 
@@ -612,8 +531,6 @@ The site was deployed to Heroku. The steps to deploy are as follows:
 - Add the following config vars:
   - SECRET_KEY: (Your secret key)
   - DATABASE_URL: (This should already exist with add on of postgres)
-  - EMAIL_HOST_USER: (email address)
-  - EMAIL_HOST_PASS: (email app password)
   - CLOUNDINARY_URL: (cloudinary api url)
 - Click the deploy tab
 - Scroll down to Connect to GitHub and sign in / authorize when prompted
@@ -623,7 +540,7 @@ The site was deployed to Heroku. The steps to deploy are as follows:
 
 The app should now be deployed.
 
-The live link can be found here: [Live Site](https://sizzle-and-steak.onrender.com/)
+The live link can be found here: [Live Site](https://cultureschool-1a3ff85c7080.herokuapp.com/)
 
 ### Run Locally
 
