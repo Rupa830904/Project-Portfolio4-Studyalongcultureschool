@@ -178,162 +178,127 @@ The Navigation contains links for Home, Bookings, FAQs and has allauth options.
 
 The navigation option is displayed on all pages . This will allow users to view the site from any device and not take up too much space on mobile devices.
 
-![Navbar](docs/readme_images/navbar.PNG)
+![Navbar]()
 
-``USER STORY - As a developer, I need to create the navbar so that users can navigate the website from any device``
+``USER STORY - As a site user I can read the details os a course so that I can choose to book``
 
 Implementation:
 
-**Home Page**
+**Course Page**
 
-The home page contains a hero image of a seaside restaurant and the restaurant information at the top of the page. This will immediately make it evident to the user, what the purpose of the website is.
+The course page contains a imahge and the title of the available courses. It also provides a link below each course title. On use click it opens a new page with course details.
 
 Under the information section are two buttons, 'Make a booking' and 'View Menus'. These buttons will allow the user a quick way to the respective pages if they wish to make a booking or view the restaurants active menus.
 
 The last section of the home page contains a google map, marking the location of the restaurant and the opening hours of the restaurant. This will allow the user to locate the restaurant and operating times.
 
-![Hero Image](docs/readme_images/hero.PNG)
+![Course]()
 
-![Welcome Section](docs/readme_images/welcome.PNG)
-
-![Find Us](docs/readme_images/find-us.PNG)
+![Course Details]()
 
 
-``USER STORY - As a developer, I need to create the footer with social media links and contact information``
+
+
+``USER STORY - As a superuser I can edit course details so that I can update date, place,teacher and content``
+
+**Edit Course**
+
+Implementation:
+ 
+A superuser will get am EDIT button on course detail page. the button will redirect to the course form where Place , Teacher , Description and Course start date can be edited.
+
+
+
+``USER STORY - As a Superuser I can create new courses so that I can manage my school courses``
+
+**Create New Course**
 
 Implementation:
 
-**Footer**
+A create course button was implemented to allow teh super user to create new course. It allows to populate all attributes of the course.
 
-A footer has been added to the bottom of the site, this contains a Twitter and Facebook link so that users can follow the restaurant on social media if they want to keep up to date with special offers not advertised on the website. These icons have aria-labels added to ensure users with assistive screen reading technology know what the purpose of the links are for. They also open in new tabs as they lead users away from the site.
+![Create Course]()
 
-![Footer](docs/readme_images/footer.PNG)
 
-``USER STORY - As a staff user, I want to be able to create a new menu when we have new dishes to offer``
 
-Implementation:
+``USER STORY -As a user I can check the places left in a course so that I can choose the course to join``
 
-**Create Menu Page**
-
-A create menu page was implemented to allow staff users to create new menus via the UI without having to use the backend admin panel. This will allow staff the ability to quickly update menus when they have made changes to the food being offered.
-
-![Create Menu](docs/readme_images/create-menu.PNG)
-
-``USER STORY -As a user, I would like to be able to view menus so that I can decide if I would like to dine at the restaurant``
+**Check Course Availability**
 
 Implementation:
 
-**View Menu Page**
+A button has been impplemented in each course details page. On click it will display the places left to the user.
 
-A menu page has been implemented to allow users to see the current active menus and decide whether they are interested in the food we offer before booking. This is visible to all users regardless of logged in state as it is not user friendly to restrict core information from users to force them into signing up.
+![View places left]()
 
-![View Menus](docs/readme_images/menus.PNG)
-
-``USER STORY -As a staff user, I want to be able to edit a menu when updates are needed``
-
-Implementation:
-
-**Edit Menu Page**
-
-On the manage menus page a button was added to allow staff members to edit a menu when changes need to be made.
-
-![Edit Menu](docs/readme_images/edit-menu.PNG)
-
-``USER STORY -As a staff member, I would like to receive feedback when I create or update menus so that I can see they have worked``
-
-Implementation:
-
-**Toasts**
-
-Custom toasts were added on successful creation and deletion of menus which display success messages to the user to enable them to see that the action completed successfully.
-
-![Menu Toasts](docs/readme_images/toast-menu.PNG)
-
-``USER STORY -As a staff user, I want to be able to delete a menu when it is no longer used``
-
-Implementation:
-
-**Delete Menu Page**
-
-On the manage menus page, a delete button has been implemented that will take staff users to a confirmation page to allow them to delete a menu. This will allow staff to delete menus when they are no longer needed
-
-![Delete Menu](docs/readme_images/delete-menu.PNG)
-
-``USER-STORY - As a user, I would like to be able to create a new booking when I want to visit the restaurant``
+``USER-STORY - As a site user I can book a course so that I can join the school``
 
 Implementation:
 
 **Create booking page**
 
-A booking page was implemented with a form that takes in the customer details and enables the user to easily make a booking through the UI. 
+A 'Book a Course' button was created on booking page. It opens the booking form. On submit the filled up booking form , the course is booked if all school rules are adhered.
 
-Extensive logic was added to the form validation to ensure that not only is there a table available for the users chosen time and date but also that it has enough seats for the amount of guests. If the form is successful with validation on the front end, logic is in place to find the lowest capacity table to seat the guests for the given date and time.
+![Create Booking]()
 
-This allows for seat optimisation to ensure we do not have small amounts of guests at tables that could of been booked for larger groups. Ensuring table optimisation and revenue for the restaurant.
-
-![Create Booking](docs/readme_images/create-booking.PNG)
-
-``USER-STORY - As a user, I would like to view my bookings when I need to check the information``
+``USER-STORY - As a user I can edit my bookings so that I can manage the bookings``
 
 Implementation:
 
 **Manage bookings page**
 
-A manage bookings page was implemented with validation checks on the user. This shows all of the users bookings. This will allow the user to view their upcoming bookings when needed.
+A manage my bookings button was implemented, On clicking this button , It displays all the bookings of the user. User has options to edit or delete the existing bookings.
 
-For restaurant staff users, all bookings will be available to display so that staff can easily view numbers and future bookings.
+![Manage Bookings]()
 
-![Manage Bookings](docs/readme_images/manage-bookings.PNG)
-
-``USER-STORY - As a user, I would like to be able to edit a booking so that I can make changes when needed``
+``USER-STORY - As a As a user I get the confirmation messages for booking operations so that I know the operation is successf``
 
 Implementation:
 
-**Edit Booking Page**
+**Booking operation success**
 
-On the manage bookings page an edit button is present that allows the user to direct to a form and update their booking when required. This will allow the user to easily manage their own booking.
-
-For staff users, they can also edit bookings from the manage booking page, even if they did not create the reservation. This will allow restaurant staff to ammend details as needed.
+On every successful operation, a user message is displayed whether the operation is successful or user is advised with the school rules.
 
 ![Edit Booking](docs/readme_images/edit-booking.PNG)
 
-``USER-STORY - As a user, I would like to receive feedback when I create a booking or edit one so I know it was completed successfully``
+``USER-STORY - As a superuser I can search a booking with Full name so that I can see the bookings details``
 
 Implementation:
 
-**Toasts**
+**Search a Booking**
 
-Custom toasts were implemented on the successful creation and editing of bookings. This will provide feedback to the user to relay information that the booking was successfully received or updated.
+A serach box is available for superuser to search any bookings. After entering the Full Name and click on Find , the booking details is diaplayed eith EDIT/DELETE option.
 
-![Booking Toasts](docs/readme_images/booking-toast.PNG)
+[Search Box]()
 
-``USER-STORY - As a staff user, I want to be able to search a booking by reference to save time searching``
-
-Implementation:
-
-**Searchbox**
-
-A search box was added to the manage bookings page that is only visible to staff users. This will allow the staff members to easily locate a booking by reference number if they need to find it quickly.
-
-[Search Boxes](docs/readme_images/search.PNG)
-
-``USER-STORY - As a user I would like to delete a booking when I no longer require it``
+``USER-STORY - As a superuser I can EDIT or DELETE the booking after I search and find the booking so that I can change the booking is necessary``
 
 Implementation:
 
-**Delete Booking Page**
+**Manage searched booking**
 
-A delete button was added to the manage bookings page that will allow customers to delete their booking should they no longer require it without the need to call the restaurant.
+After the finding a booking from search, a superuser can edit or delete the booking as necessary same as manage my booking page.
 
-For staff members, they also have the abaility to delete any booking through the UI as well. This will allow staff to free up table capacity should a customer call to cancel their booking.
 
-![Delete Booking](docs/readme_images/delete-booking.PNG)
+``USER-STORY - As a Site User I can Delete my booking so that I can unregister from a course.``
 
-Favicon
-    * A site wide favicon was implemented.
-    * This provides an image in the tabs header to allow the user to easily identify the website if they have multiple tabs open.
+Implementation:
 
-![Favicon](docs/readme_images/favicon.PNG)
+**Delete Booking**
+
+A delete button was added to the each booking. A user can delete his/her own booking.Additional user confirmation page is displayed as well.
+
+![Delete Booking]()
+
+**Validate booking User Stories**
+
+The following stories were implemented in order to validate the user request to book a course.
+
+``As a developer I need to validate the age for new registration so that minimum 5 years of age limit is maintained in school``
+
+``As a developer I need to validate free place in course so that user gets message when course is full. Maximum place in course is 10.``
+
+``As a developer I must validate the new booking against the existing booking so that double booking is prevented``
 
 **Error Pages**
 
@@ -343,7 +308,7 @@ Implementation:
 
 **404 Page**
 
-As a developer, I need to implement a 404 error page to redirect users to
+``As a developer, I need to implement a 404 error page to redirect users to Home page``
 
 A 404 page has been implemented and will display if a user navigates to a broken link.
 
@@ -357,15 +322,8 @@ Implementation:
 
 A 403 error page has been implemented to provide feedback to the user when they try to access unauthorized content. Users will be directed to this page if they alter the URL's and attempt to edit, delete or access pages that are restricted. 
 
-This covers:
 
-* Create Menu - Only authorized to staff
-* Edit Menu - Only authorized to staff
-* Delete Menu - Only authorized to staff
-* Edit Booking - Only authorized to the customer who created the booking or a staff member
-* Delete booking - Only authorized to the customer who created the booking or a staff member
-
-``USER STORY - As a developer, I need to implement a 500 error page to alert users when an internal server error occurs``
+``USER STORY - As a developer* I should create 403.html so that unauthorised user access geta 'Access Forbidden' page``
 
 Implementation:
 
@@ -377,9 +335,11 @@ A 500 error page has been displayed to alert users when an internal server error
 
 The following stories were implemented in order to set up a base structure for all the HTML pages and the core installations and configurations needed to run the application. While these do not show as individual features, they were stories completed that were needed to implement all of the stories above.
 
-``As a developer, I need to create the base.html page and structure so that other pages can reuse the layout``
+``As a developer I can deploy the base project to heroku so that **I can complete the initial set up with all components( Postgres DB , Clodinary ,Github and Heroku. **``
 
 ``As a developer, I need to set up the project so that it is ready for implementing the core features``
+
+``As a developer, I need to create the base.html page and structure so that other pages can reuse the layout ``
 
 
 
@@ -388,11 +348,8 @@ The following stories were implemented in order to set up a base structure for a
 
 The database was designed to allow CRUD functionality to be available to registered users, when signed in. The course model is at the heart of the application as it is connected the Bookcourse model, linked by primary/foreign key relationships.The FAQ model is a standalone model providing the Q&A feature to the visitors.
 
-The Menu Items model holds objects that are linked to the Menu Models by a many to many relationship. This allows for staff to create menus with many menu items on.
+Bookings are related to the course by a Foreign Key which allows the users to manage bookings attached to their accounts.
 
-Bookings are related to the students (user) by a Foreign Key which allows the users to be able to view and update bookings attached to their accounts.
-
-Entity relationship diagram was created using [DBVisualizer](https://www.dbvis.com/) and shows the schemas for each of the models and how they are related.
 
 ![Entity Relationship Diagram]()
 
@@ -411,11 +368,8 @@ The main color schemes for the website are black ( #000000 ) ground. White font 
 
 ### Typography
 
-The Roboto font was used throughout the website. This font is from google fonts and was imported into the style sheet.
 
 ### Imagery
-
-The Website logo was made using Canva using the Gold colour to match in with the website color scheme.
 
 The course images were taken from google.com copyright free images.
 
