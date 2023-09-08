@@ -56,14 +56,13 @@
                     </li>
                 </ul>
                 <span class="navbar-text text-primary">
-                    Embrace the world of culture
+                    <strong>Welcome {{ user.get_username }}! </strong> Embrace the world of culture
                 </span>
             </div>
         </div>
     </nav>
 
     <main class="flex-shrink-0 main-bg">
-        <strong>You are Logged in as {{ user.get_username }} </strong>
         {% block content %}
         <!-- Content Goes here -->
         {% endblock content %}
