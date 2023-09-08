@@ -5,36 +5,7 @@ The live link can be found here: [Live Site - STUDYALONG CULTURESCHOOL](https://
 
 ![Mock Up]()
 
-## Table of Contents
-- [STUDYALONG CULTURESCHOOL](#studyalong-cultureschool)
-  - [Table of Contents](#table-of-contents)
-- [User-Experience-Design](#user-experience-design)
-  - [The-Strategy-Plane](#the-strategy-plane)
-    - [Site-Goals](#site-goals)
-    - [Agile Planning](#agile-planning)
-      - [Epics](#epics)
-      - [User Stories](#user-stories)
-  - [The-Scope-Plane](#the-scope-plane)
-  - [The-Structure-Plane](#the-structure-plane)
-    - [Features](#features)
-    - [Features Left To Implement](#features-left-to-implement)
-  - [The-Skeleton-Plane](#the-skeleton-plane)
-    - [Wireframes](#wireframes)
-    - [Database-Design](#database-design)
-    - [Security](#security)
-  - [The-Surface-Plane](#the-surface-plane)
-    - [Design](#design)
-    - [Colour-Scheme](#colour-scheme)
-    - [Typography](#typography)
-    - [Imagery](#imagery)
-  - [Technolgies](#technolgies)
-  - [Testing](#testing)
-  - [Deployment](#deployment)
-    - [Version Control](#version-control)
-    - [Heroku Deployment](#heroku-deployment)
-    - [Run Locally](#run-locally)
-    - [Fork Project](#fork-project)
-  - [Credits](#credits)
+
 
 # User-Experience-Design
 
@@ -54,7 +25,7 @@ All projects were assigned to epics, prioritized under the labels, Must have, sh
 
 The Kanban board was created using github projects and can be located [here](https://github.com/users/Rupa830904/projects/6) and can be viewed to see more information on the project cards. All stories except the documentation tasks have a full set of acceptance criteria in order to define the functionality that marks that story as complete.
 
-![Kanban image](docs/readme_images/kanban.PNG)
+![Kanban image]()
 
 #### Epics
 
@@ -97,61 +68,30 @@ This epic is for all document related stories and tasks that are needed to docum
 
 **EPIC 1 - Base Setup**
 
-As a developer, I need to create the base.html page and structure so that other pages can reuse the layout
 
-As a developer, I need to set up the project so that it is ready for implementing the core features
-
-As a developer, I need to create the navbar so that users can navigate the website from any device
 
 **EPIC 2 - Stand alone Pages**
 
-As a developer, I need to implement a 404 error page to alert users when they have accessed a page that doesn't exist
 
-As a developer, I need to implement a 500 error page to alert users when an internal server error occurs
-
-As a developer, I need to implement a 403 error page to redirect unauthorised users to so that I can secure my views
 
 **EPIC 3 - Course**
 
-As a developer, I need to implement allauth so that users can sign up and have access to the websites features
 
-As a Site Owner, I want users to verify their email when registering an account so that I can ensure that a valid email address is being used.
 
-As a site owner, I would like the allauth pages customized to that they fit in with the sites styling
+**EPIC 4 - Booking**
 
-**EPIC 4 - Menu**
 
-As a staff user, I want to be able to create a new menu when we have new dishes to offer
+**EPIC 5 - FAQ**
 
-As a user, I would like to be able to view menus so that I can decide if I would like to dine at the restaurant
 
-As a staff user, I want to be able to edit a menu when updates are needed
 
-As a staff member, I would like to receive feedback when I create or update menus so that I can see they have worked
+**EPIC 6 - Validation**
 
-As a staff user, I want to be able to delete a menu when it is no longer used
 
-**EPIC 5 - Booking**
 
-As a user, I would like to be able to create a new booking when I want to visit the restaurant
+**EPIC 7 - Testing**
 
-As a user, I would like to view my bookings when I need to check the information
-
-As a user, I would like to be able to edit a booking so that I can make changes when needed
-
-As a user, I would like to receive feedback when I create a booking or edit one so I know it was completed successfully
-
-As a staff user, I want to be able to search a booking by reference to save time searching
-
-As a user I would like to delete a booking when I no longer require it
-
-**EPIC 6 - Deployment Epic**
-
-As a developer, I need to set up whitenoise so that my static files are served in deployment
-
-As a developer, I need to deploy the project to heroku so that it is live for customers
-
-**EPIC 7 - Documentation**
+**EPIC 8 - Documentation**
 
 Tasks:
 
@@ -364,7 +304,7 @@ Environment variables were stored in an env.py for local development for securit
 
 ### Colour-Scheme
 
-The main color schemes for the website are black ( #000000 ) ground. White font (#FFF) and the gold (#8f773c9e) was added to borders, button text and hover affects to add a hint of color to the website.
+
 
 ### Typography
 
@@ -421,7 +361,7 @@ The course images were taken from google.com copyright free images.
 
 ## Testing
 
-Test cases and results can be found in the [TESTING.md](TESTING.md) file. 
+Test cases and results can be found in the [TESTING.md](testing.md) file. 
 
 ## Deployment
 

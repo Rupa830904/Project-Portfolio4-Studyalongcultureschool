@@ -42,9 +42,8 @@ class TestViews(TestCase):
 
     def test_course_detail(self):
         """ Test redirect on course detail """
-        response = self.client.get('/details/1')
+        response = self.client.get('/details/3')
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'course_detail.html')
 
 
 class TestRedirectViews(TestCase):

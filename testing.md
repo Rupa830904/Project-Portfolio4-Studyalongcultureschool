@@ -27,8 +27,8 @@ Description:
 Ensure a user can log in once signed up
 
 Steps:
-1. Navigate to 
-2. Enter login detailscreated in previous test case
+1. Navigate to Login Page
+2. Enter login details. Created in previous test case
 3. Click login
 
 Expected:
