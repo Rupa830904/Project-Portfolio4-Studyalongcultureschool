@@ -7,7 +7,13 @@ from django.utils.timezone import now
 # Create your models here.
 
 # Choice fields
-COURSES = (("Indian Classical", "Indian Classical"), ("Indian Bollywood", "Indian Bollywood"), ("Yoga Dance", "Yoga Dance"), ("Street Dance", "Street Dance"), ("Ballet Dance", "Ballet Dance"), ("Zumba dance", "Zumba dance"), ("Odissi", "Odissi"))
+COURSES = (
+           ("Indian Classical", "Indian Classical"),
+           ("Indian Bollywood", "Indian Bollywood"),
+           ("Yoga Dance", "Yoga Dance"), ("Street Dance", "Street Dance"),
+           ("Ballet Dance", "Ballet Dance"),
+           ("Zumba dance", "Zumba dance"), ("Odissi", "Odissi")
+           )
 
 
 class Booking(models.Model):

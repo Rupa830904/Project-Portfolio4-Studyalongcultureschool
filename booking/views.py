@@ -33,38 +33,42 @@ class CreateBooking(LoginRequiredMixin, CreateView):
         name = form.cleaned_data['booking_name']
         course = form.cleaned_data['course']
         dob = form.cleaned_data['dob']
-        check_booking = Bookcourse.objects.filter(booking_name=name, course=course)
+        check_booking = (Bookcourse
+                         .objects
+                         .filter(booking_name=name, course=course))
         check_total = Bookcourse.objects.filter(course=course).count()
         today = datetime.today()
         age = int(today.year) - int(dob.year)
         if check_booking.exists():
             messages.success(
-            self.request,
-            f'Booking already exists for {name} in {course} . Please go to MANAGE MY BOOKING'
-            )
+                self.request,
+                f'Booking already exists for {name} in {course}.'
+                f'Please go to MANAGE MY BOOKING'
+                )
             return super(CreateBooking, self).form_invalid(form)
         if check_total == 10:
             messages.success(
-            self.request,
-            f'The {course} course is full'
-            )
+                self.request,
+                f'The {course} course is full'
+                )
             return super(CreateBooking, self).form_invalid(form)
         if age < 5:
             messages.success(
-            self.request,
-            f'Minimum age to join a course is 5.{name} is welcome later'
-            )
+                self.request,
+                f'Minimum age to join a course is 5.{name} is welcome later'
+                )
             return super(CreateBooking, self).form_invalid(form)
         else:
             obj = Bookcourse.objects.latest('id')
             messages.success(
-            self.request,
-            f'{obj} Course Booked Successfully.'
+                self.request,
+                f'{obj} Course Booked Successfully.'
             )
         return super(CreateBooking, self).form_valid(form)
 
 
-class EditBooking(SuccessMessageMixin, LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+class EditBooking(SuccessMessageMixin,
+                  LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     """ Edit a booking """
     model = Bookcourse
     template_name = "edit_booking.html"
@@ -76,7 +80,8 @@ class EditBooking(SuccessMessageMixin, LoginRequiredMixin, UserPassesTestMixin, 
         return self.request.user == self.get_object().username
 
 
-class DeleteBooking(LoginRequiredMixin, SuccessMessageMixin, UserPassesTestMixin, DeleteView):
+class DeleteBooking(LoginRequiredMixin,
+                    SuccessMessageMixin, UserPassesTestMixin, DeleteView):
     """ Delete a booking """
     model = Bookcourse
     template_name = "booking_confirm_delete.html"
@@ -101,5 +106,8 @@ class SearchBooking(ListView):
 
     def get_queryset(self):
         query = self.request.GET.get('q')
-        queryset = Bookcourse.objects.filter(booking_name__icontains=query).order_by("-booked_date")
+        queryset = (Bookcourse
+                    .objects
+                    .filter(booking_name__icontains=query)
+                    .order_by("-booked_date"))
         return queryset

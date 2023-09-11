@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from django.views import generic
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
-from django.views.generic import CreateView, UpdateView, DeleteView, DetailView, ListView
+from django.views.generic import CreateView, UpdateView, DeleteView
+from django.views.generic import DetailView, ListView
 from .models import Course
 from booking.models import Bookcourse
 from .forms import CourseForm, AddcourseForm
@@ -45,6 +46,6 @@ class Checkcourse(LoginRequiredMixin, ListView):
 
     def get_queryset(self):
         item = self.request.GET.get('course')
-        total_booking = Bookcourse.objects.filter(course__icontains=item).count()
+        total_booking = Bookcourse.objects.filter(course=item).count()
         place_left = 10 - total_booking
         return place_left
