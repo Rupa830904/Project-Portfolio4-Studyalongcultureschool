@@ -12,23 +12,23 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
         type="text/css">
 {% endblock %}
-<body>
-    <div class="row">
+
+<div class="row">
         <div class="col s12 center-align">
             <a href="{% url 'add_booking' %}" class="btn-large light-blue darken-2">
                 Book a Course <i class="fas fa-plus-square right"></i>
             </a>
         </div>
-    </div>
-    <div class="row">
+</div>
+<div class="row">
         <div class="col s12 center-align">
             <a href="{% url 'view_booking' %}" class="btn-large light-blue darken-2">
                 Manage my booking<i class="fas fa-plus-square right"></i>
             </a>
         </div>
-    </div>
+</div>
     {% if user.is_superuser %}
-    <div class="container">
+<div class="container">
     <form  action="{% url 'search_booking' %}" method="GET"  class="p-2 form">
         <h4 class="text-center">Find a booking</h4>
         {% csrf_token %}
@@ -46,6 +46,5 @@
     {% endfor %}
 </ul>
 {% endif %}
-</body>
 
 {% endblock content %}
