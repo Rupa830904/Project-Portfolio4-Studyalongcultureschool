@@ -4,18 +4,6 @@
 
 {% load crispy_forms_tags %}
 
-<!---div class="container">
-    <form method="GET" enctype="multipart/form-data" class="p-2 form">
-        <h1 class="text-center">Create Booking</h1>
-        {% csrf_token %}
-        {{ form.media }}
-        {{ form | crispy }}
-        <div class="text-center">
-            <button type="submit" class="btn btn-primary mt-2">Search Bookings</button>
-        </div>
-    </form>
-</div--->
-
 <div class="col-12 mt-3 left">
     <div class="row">
         {% for bookcourse in bookcourse_list %}
