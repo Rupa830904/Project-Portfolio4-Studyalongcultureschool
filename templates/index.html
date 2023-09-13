@@ -17,12 +17,11 @@
                                 <img class="card-img-top"
                                     src="https://res.cloudinary.com/dmdnckqzb/image/upload/v1689636253/samples/landscapes/nature-mountains.jpg">
                                 {% else %}
-                                <img class="card-img-top" alt="course_image" src=" {{ course.course_image.url }}">
+                                <img class="card-img-top" alt="course image" src=" {{ course.course_image.url }}">
                                 {% endif %}
                                 <div class="image-flash">
-                                    <strong> {{ course.title }}</strong>
-                                    <a href="{% url 'course_detail' course.id %}" class="course-link">
-                                        <p>Click here for details</p>
+                                    <a href="{% url 'course_detail' course.id %}" style="color:rgba(255, 0, 0, 0.473)" class="course-link">
+                                        <strong>{{ course.title }}</strong>
                                     </a>
                                 </div>
                             </div>
