@@ -347,9 +347,7 @@ Unit tests were created to test some basic functionality such as templates used 
 
 Results:
 
-![unit tests 1]()
-![unit tests 2]()
-![unit tests 3]()
+![unit test](docs/testing_images/unit_test.JPG)
 
 ## Accessibility
 
@@ -366,32 +364,34 @@ Testing was focused to ensure the following criteria were met:
 - Aria properties have been implemented correctly
 - WCAG 2.1 Coding best practices being followed
 
-![WAVE test]()
+![WAVE test](docs/testing_images/WAVE_Validation_test.JPG)
 
 ## Validator Testing
 
 All pages were run through the [w3 HTML Validator](https://validator.w3.org/). Initially there were some errors due to stray script tags, misuse of headings within spans and some unclosed elements. All of these issues were corrected and all pages passed validation.
 
-Due to the django templating language code used in the HTML files, these could not be copy and pasted into the validator and due to the secured views, pages with login required or a secured view cannot be validated by direct URI. To test the validation on the files, open the page to validate, right click and view page source. Paste the raw html code into the validator as this will be only the HTML rendered code.
+To test the validation on the files, open the page to validate, right click and view page source. Paste the raw html code into the validator as this will be only the HTML rendered code.More evidences added for each page validation under docs/testing_images folder.
 
-![HTML Validator]()
+![HTML Validator1](docs/testing_images/Html_validator_base.JPG)
+![HTML Validator2](docs/testing_images/Html_validator_faq.JPG)
+![HTML Validator3](docs/testing_images/Html_validator_booking.JPG)
 
 All pages were run through the official [Pep8](http://pep8online.com/) validator to ensure all code was pep8 compliant. Some errors were shown due to blank spacing and lines too long, 1 line instead of 2 expected. All of these errors were resolved and code passed through validators with the exception of the settings.py file.
 
 The django auto generated code for AUTH_PASSWORD_VALIDATORS were showing up as lines too long. I could not find a way to split these lines but since they were auto generated and not my own custom code, I hope this is acceptable.
 
-![PEP8]()
+![PEP8](docs/testing_images/PEP8_validation.JPG)
 
 
 
 
 ## Responsiveness
 
-All pages were tested to ensure responsiveness on screen sizes from 320px and upwards as defined in WCAG 2.1 Reflow criteria for responsive design on Chrome, Edge, Firefox and Opera browsers.
+All pages were tested to ensure responsiveness on screen sizes from 320px and upwards as defined in WCAG 2.1 Reflow criteria for responsive design on Chrome and Edge.
 
 Steps to test:
 
-- Open browser and navigate to []
+- Open browser and navigate to [https://cultureschool-1a3ff85c7080.herokuapp.com/]
 - Open the developer tools (right click and inspect)
 - Set to responsive and decrease width to 320px
 - Set the zoom to 50%
@@ -410,3 +410,5 @@ Website was also opened on the following devices and no responsive issues were s
 
 
 ## Bugs
+
+There logout and sign in messages displayed while logging out and logging in. Identified the root cause to clear the django contrib messages. It was not possible to fix with the delivery timeline. it can be fixed in a bug fix release.
