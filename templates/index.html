@@ -14,7 +14,7 @@
                         <div class="card-body">
                             <div class="image-container">
                                 {% if "placeholder" in course.course_image.url %}
-                                <img class="card-img-top"
+                                <img class="card-img-top"  alt="default placeholder image"
                                     src="https://res.cloudinary.com/dmdnckqzb/image/upload/v1689636253/samples/landscapes/nature-mountains.jpg">
                                 {% else %}
                                 <img class="card-img-top" alt="dance form image" src=" {{ course.course_image.url }}">
