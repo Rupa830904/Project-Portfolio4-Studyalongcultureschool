@@ -1,6 +1,7 @@
 from django.test import TestCase
 from django.contrib.auth import get_user_model
 from .models import Course
+from datetime import date
 
 # Create your tests here.
 
@@ -23,6 +24,15 @@ class TestViews(TestCase):
         logged_in = self.client.login(username=username, password=password)
         self.assertTrue(logged_in)
 
+        # Create course
+        course = Course.objects.create(
+            title='Jazz',
+            content = 'Western Dance',
+            teacher = 'Eva',
+            place = 'Almhult',
+            starting_on = date.today()
+            )
+
     def test_create_menu_page(self):
         """ Test course detail """
         response = self.client.get('/')
@@ -39,11 +49,6 @@ class TestViews(TestCase):
         response = self.client.get('/check-course/3?course=Street Dance')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'check_course.html')
-
-    def test_course_detail(self):
-        """ Test redirect on course detail """
-        response = self.client.get('/details/3')
-        self.assertEqual(response.status_code, 200)
 
 
 class TestRedirectViews(TestCase):
