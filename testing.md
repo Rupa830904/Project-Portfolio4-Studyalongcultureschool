@@ -380,7 +380,7 @@ All pages were run through the official [Pep8](http://pep8online.com/) validator
 
 The django auto generated code for AUTH_PASSWORD_VALIDATORS were showing up as lines too long. I could not find a way to split these lines but since they were auto generated and not my own custom code, I hope this is acceptable.
 
-![PEP8](docs/testing_images/PEP8_validation.JPG)
+![PEP8](static/docs/testing_images/PEP8_validation.JPG)
 
 
 
@@ -411,4 +411,4 @@ Website was also opened on the following devices and no responsive issues were s
 
 ## Bugs
 
-There logout and sign in messages displayed while logging out and logging in. Identified the root cause to clear the django contrib messages. It was not possible to fix with the delivery timeline. it can be fixed in a bug fix release.
+There are logout and sign in messages displayed while logging out and logging in. Identified the root cause to clear the django contrib messages. It was not possible to fix with the delivery timeline. it can be fixed in a bug fix release.
