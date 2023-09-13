@@ -56,9 +56,9 @@ The FAQ epic is for all stories that relate to creating, viewing, updating frequ
 
 The validation epic is for all stories that checks the user inputs for creating any booking against the rules of the culture school.his allows the school to adhere to booking policies.
 
-**EPIC 7 - Testing**
+**EPIC 7 - Authentication**
 
-The testing epic is for all stories that relate to testing. Like Unit test cases in each app , PEP8 validation, validator testing.
+This epic is for all stories that relate to app authentication. Like create sign in and login features.
 
 **EPIC 8 - Documentation**
 
@@ -89,7 +89,7 @@ This epic is for all document related stories and tasks that are needed to docum
 
 
 
-**EPIC 7 - Testing**
+**EPIC 7 - Authentication**
 
 **EPIC 8 - Documentation**
 
