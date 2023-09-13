@@ -3,7 +3,7 @@
 STUDYALONG CULTURESCHOOL is a fictional school located in a small town of Sweden. The app is a school management system designed to allow students and admin to easily manage the courses and bookings. It also provides users with a simple, easy to use booking system where they can view and manage their own bookings.
 The live link can be found here: [Live Site - STUDYALONG CULTURESCHOOL](https://cultureschool-1a3ff85c7080.herokuapp.com/)
 
-![Mock Up]()
+![Mock Up](static/docs/readme_images/all-devices-black.png)
 
 
 
