@@ -347,7 +347,7 @@ Unit tests were created to test some basic functionality such as templates used 
 
 Results:
 
-![unit test](docs/testing_images/unit_test.JPG)
+![unit test](static/docs/testing_images/unit_test.JPG)
 
 ## Accessibility
 
@@ -364,7 +364,7 @@ Testing was focused to ensure the following criteria were met:
 - Aria properties have been implemented correctly
 - WCAG 2.1 Coding best practices being followed
 
-![WAVE test](docs/testing_images/WAVE_Validation_test.JPG)
+![WAVE test](static/docs/testing_images/WAVE_Validation_test.JPG)
 
 ## Validator Testing
 
@@ -372,9 +372,9 @@ All pages were run through the [w3 HTML Validator](https://validator.w3.org/). I
 
 To test the validation on the files, open the page to validate, right click and view page source. Paste the raw html code into the validator as this will be only the HTML rendered code.More evidences added for each page validation under docs/testing_images folder.
 
-![HTML Validator1](docs/testing_images/Html_validator_base.JPG)
-![HTML Validator2](docs/testing_images/Html_validator_faq.JPG)
-![HTML Validator3](docs/testing_images/Html_validator_booking.JPG)
+![HTML Validator1](static/docs/testing_images/Html_validator_base.JPG)
+![HTML Validator2](static/docs/testing_images/Html_validator_faq.JPG)
+![HTML Validator3](static/docs/testing_images/Html_validator_booking.JPG)
 
 All pages were run through the official [Pep8](http://pep8online.com/) validator to ensure all code was pep8 compliant. Some errors were shown due to blank spacing and lines too long, 1 line instead of 2 expected. All of these errors were resolved and code passed through validators with the exception of the settings.py file.
 
