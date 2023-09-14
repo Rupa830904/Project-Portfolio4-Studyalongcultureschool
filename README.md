@@ -68,35 +68,78 @@ This epic is for all document related stories and tasks that are needed to docum
 
 **EPIC 1 - Base Setup**
 
+As a developer, I need to create the navbar so that users can navigate the website from any device.
+
+As a developer, I need to create the base.html page and structure so that other pages can reuse the layout.
+
+As a developer, I need to set up the project so that it is ready for implementing the core features.
+
+As a developer I can deploy the base project to heroku so that **I can complete the initial set up with all components Postgres DB , Clodinary ,Github and Heroku.
 
 
 **EPIC 2 - Stand alone Pages**
 
+As a developer, I should create 404.html so that if the user is prompted with a redirect message when landed on a non-existent page.
 
+As a developer, I should create 403.html so that unauthorised user access geta 'Access Forbodden'.
+
+As a developer I need to create 500.html so that users gets an option to redirect in case of internal server errors.
 
 **EPIC 3 - Course**
 
+As a site user I can read the details os a course so that I can choose to book.
 
+As a Superuser I can create new courses so that I can manage my school courses.
+
+As a superuser I can edit course details so that I can update date, place,teacher and content.
+
+As a user I can check the places left in a course so that I can choose the course to join
 
 **EPIC 4 - Booking**
 
+As a site user I can view my bookings so that I can manage my bookings.
+
+As a site user I can book a course so that I can join the school.
+
+As a Site User I can Delete my booking so that I can unregister from a course.
+
+As a user I can edit my bookings so that I can manage the bookings.
+
+As a user I get the confirmation messages for booking operations so that I know the operation is successful.
+
+As a superuser I can search a booking with Full name so that I can see the bookings detail.
+
+As a superuser I can EDIT or DELETE the booking after I search and find the booking so that I can change the booking is necessary.
 
 **EPIC 5 - FAQ**
 
+As a userr I can ask question to culture school ** so that I get more details about the school.
 
+As a user I can read the FAQ with or without login so that I know about culture school.
+
+As a superuser I can answer question in FAQ page so that I can reply to user queries.
 
 **EPIC 6 - Validation**
 
+As a developer I need to validate the age for new registration so that minimum 5 years of age limit is maintained in school.
+
+As a developer I need to validate free place in course so that user gets message when course is full. Maximum place in course is 10.
+
+As a developer I must validate the new booking against the existing booking so that double booking is prevented.
 
 
 **EPIC 7 - Authentication**
 
+As a Site User I can sign up to culture school so that I can book courses*.
+
+As a user I can login to teh app so that I can use the features.
+
 **EPIC 8 - Documentation**
 
-Tasks:
+As a developer I write testing.md so that all the testing carried on is well explained.
 
-* Complete readme documentation
-* Complete testing documentation write up
+As a developer, I write readme.md so that all the whole project is well explained.
+
 
 ## The-Scope-Plane
 
