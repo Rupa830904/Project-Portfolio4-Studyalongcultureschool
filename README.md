@@ -287,6 +287,8 @@ The following stories were implemented in order to validate the user request to 
 
 ``As a developer I must validate the new booking against the existing booking so that double booking is prevented``
 
+``As a user I can only delete my bookings so that it protects any accidental delete.``
+
 ![validate Booking](static/docs/readme_images/validation_age.JPG)
 
 **Error Pages**
