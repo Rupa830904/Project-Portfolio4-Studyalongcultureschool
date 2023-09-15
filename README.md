@@ -161,7 +161,7 @@ The Navigation contains links for Home, Bookings, FAQs and has allauth options.
 
 The navigation option is displayed on all pages . This will allow users to view the site from any device and not take up too much space on mobile devices.
 
-![Navbar]()
+![Navbar](static/docs/readme_images/Navbar.JPG)
 
 ``USER STORY - As a site user I can read the details os a course so that I can choose to book``
 
@@ -175,9 +175,9 @@ Under the information section are two buttons, 'Make a booking' and 'View Menus'
 
 The last section of the home page contains a google map, marking the location of the restaurant and the opening hours of the restaurant. This will allow the user to locate the restaurant and operating times.
 
-![Course]()
+![Course](static/docs/readme_images/course.JPG)
 
-![Course Details]()
+![Course Details](static/docs/readme_images/course_details.JPG)
 
 
 
@@ -190,7 +190,7 @@ Implementation:
  
 A superuser will get am EDIT button on course detail page. the button will redirect to the course form where Place , Teacher , Description and Course start date can be edited.
 
-
+![Course Details](static/docs/readme_images/edit_course.JPG)
 
 ``USER STORY - As a Superuser I can create new courses so that I can manage my school courses``
 
@@ -200,7 +200,7 @@ Implementation:
 
 A create course button was implemented to allow teh super user to create new course. It allows to populate all attributes of the course.
 
-![Create Course]()
+![Create Course](static/docs/readme_images/create_course.JPG)
 
 
 
@@ -210,9 +210,9 @@ A create course button was implemented to allow teh super user to create new cou
 
 Implementation:
 
-A button has been impplemented in each course details page. On click it will display the places left to the user.
+A button has been implemented in each course details page. On click it will display the places left to the user.
 
-![View places left]()
+![View places left](static/docs/readme_images/check_place.JPG)
 
 ``USER-STORY - As a site user I can book a course so that I can join the school``
 
@@ -222,7 +222,9 @@ Implementation:
 
 A 'Book a Course' button was created on booking page. It opens the booking form. On submit the filled up booking form , the course is booked if all school rules are adhered.
 
-![Create Booking]()
+![Booking Page](static/docs/readme_images/booking.JPG)
+
+![Create Booking](static/docs/readme_images/create_booking.JPG)
 
 ``USER-STORY - As a user I can edit my bookings so that I can manage the bookings``
 
@@ -232,7 +234,7 @@ Implementation:
 
 A manage my bookings button was implemented, On clicking this button , It displays all the bookings of the user. User has options to edit or delete the existing bookings.
 
-![Manage Bookings]()
+![Manage Bookings Page](static/docs/readme_images/manage_booking.JPG)
 
 ``USER-STORY - As a As a user I get the confirmation messages for booking operations so that I know the operation is successf``
 
@@ -242,7 +244,7 @@ Implementation:
 
 On every successful operation, a user message is displayed whether the operation is successful or user is advised with the school rules.
 
-![Edit Booking](docs/readme_images/edit-booking.PNG)
+![Success Booking](static/docs/readme_images/booking_success.JPG)
 
 ``USER-STORY - As a superuser I can search a booking with Full name so that I can see the bookings details``
 
@@ -252,7 +254,7 @@ Implementation:
 
 A serach box is available for superuser to search any bookings. After entering the Full Name and click on Find , the booking details is diaplayed eith EDIT/DELETE option.
 
-[Search Box]()
+[Search Box](static/docs/readme_images/search_booking.JPG)
 
 ``USER-STORY - As a superuser I can EDIT or DELETE the booking after I search and find the booking so that I can change the booking is necessary``
 
@@ -261,6 +263,8 @@ Implementation:
 **Manage searched booking**
 
 After the finding a booking from search, a superuser can edit or delete the booking as necessary same as manage my booking page.
+
+[Search Box](static/docs/readme_images/search_other_booking.JPG)
 
 
 ``USER-STORY - As a Site User I can Delete my booking so that I can unregister from a course.``
@@ -271,7 +275,7 @@ Implementation:
 
 A delete button was added to the each booking. A user can delete his/her own booking.Additional user confirmation page is displayed as well.
 
-![Delete Booking]()
+![Delete Booking](static/docs/readme_images/booking_delete.JPG)
 
 **Validate booking User Stories**
 
@@ -283,6 +287,8 @@ The following stories were implemented in order to validate the user request to 
 
 ``As a developer I must validate the new booking against the existing booking so that double booking is prevented``
 
+![validate Booking](static/docs/readme_images/validation_age.JPG)
+
 **Error Pages**
 
 ``USER STORY - As a developer, I need to implement a 404 error page to alert users when they have accessed a page that doesn't exist``
@@ -291,11 +297,11 @@ Implementation:
 
 **404 Page**
 
-``As a developer, I need to implement a 404 error page to redirect users to Home page``
-
 A 404 page has been implemented and will display if a user navigates to a broken link.
 
 The 404 page will allow the user to easily navigate back to the main website if they direct to a broken link / missing page, without the need  of the browsers back button.
+
+![404 page](static/docs/readme_images/404.JPG)
 
 ``USER STORY - As a developer, I need to implement a 403 error page to alert users when accessing a page/view that they do not have permission to view``
 
@@ -305,8 +311,10 @@ Implementation:
 
 A 403 error page has been implemented to provide feedback to the user when they try to access unauthorized content. Users will be directed to this page if they alter the URL's and attempt to edit, delete or access pages that are restricted. 
 
+![403 page](static/docs/readme_images/403.JPG)
 
-``USER STORY - As a developer* I should create 403.html so that unauthorised user access geta 'Access Forbidden' page``
+
+``USER STORY - As a developer* I should create 500.html so that unauthorised user access geta 'Access Forbidden' page``
 
 Implementation:
 
