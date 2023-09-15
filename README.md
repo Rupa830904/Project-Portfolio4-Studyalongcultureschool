@@ -264,7 +264,7 @@ Implementation:
 
 After the finding a booking from search, a superuser can edit or delete the booking as necessary same as manage my booking page.
 
-[Search Box](static/docs/readme_images/search_other_booking.JPG)
+[Search result page](static/docs/readme_images/search_other_booking.JPG)
 
 
 ``USER-STORY - As a Site User I can Delete my booking so that I can unregister from a course.``
