@@ -254,7 +254,7 @@ Implementation:
 
 A serach box is available for superuser to search any bookings. After entering the Full Name and click on Find , the booking details is diaplayed eith EDIT/DELETE option.
 
-[Search Box](static/docs/readme_images/search_booking.JPG)
+![Search Box](static/docs/readme_images/search_booking.JPG)
 
 ``USER-STORY - As a superuser I can EDIT or DELETE the booking after I search and find the booking so that I can change the booking is necessary``
 
@@ -264,7 +264,7 @@ Implementation:
 
 After the finding a booking from search, a superuser can edit or delete the booking as necessary same as manage my booking page.
 
-[Search result page](static/docs/readme_images/search_other_booking.JPG)
+![Search result page](static/docs/readme_images/search_other_booking.JPG)
 
 
 ``USER-STORY - As a Site User I can Delete my booking so that I can unregister from a course.``
