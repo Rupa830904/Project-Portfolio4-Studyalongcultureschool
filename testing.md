@@ -375,6 +375,11 @@ To test the validation on the files, open the page to validate, right click and 
 ![HTML Validator1](static/docs/testing_images/Html_validator_base.JPG)
 ![HTML Validator2](static/docs/testing_images/Html_validator_faq.JPG)
 ![HTML Validator3](static/docs/testing_images/Html_validator_booking.JPG)
+![HTML Validator4](static/docs/testing_images/Html_validator_create_booking.JPG)
+![HTML Validator5](static/docs/testing_images/Html_validator_create_course.JPG)
+![HTML Validator6](static/docs/testing_images/Html_validator_delete_booking.JPG)
+![HTML Validator7](static/docs/testing_images/Html_validator_post_faq.JPG)
+![HTML Validator8](static/docs/testing_images/Html_validator_ans_faq.JPG)
 
 All pages were run through the official [Pep8](http://pep8online.com/) validator to ensure all code was pep8 compliant. Some errors were shown due to blank spacing and lines too long, 1 line instead of 2 expected. All of these errors were resolved and code passed through validators with the exception of the settings.py file.
 
