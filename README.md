@@ -25,7 +25,7 @@ All projects were assigned to epics, prioritized under the labels, Must have, sh
 
 The Kanban board was created using github projects and can be located [here](https://github.com/users/Rupa830904/projects/6) and can be viewed to see more information on the project cards. All stories except the documentation tasks have a full set of acceptance criteria in order to define the functionality that marks that story as complete.
 
-![Kanban image]()
+![Kanban image](static/docs/readme_images/kanban_board.JPG)
 
 #### Epics
 
@@ -359,15 +359,25 @@ Implementation:
 
 A 500 error page has been displayed to alert users when an internal server error occurs. The message relays to users that the problem is on our end, not theirs.
 
+**Authentication Stories**
+
+The following stories were implemented in order to set up sign in and authentication method to the app.To use all features of the app like booking all users needs to register and login. User can navigate to register to sign in and can navigate to login to login to the application.
+
+``USER STORY -- As a Site User I can sign up to culture school so that I can book courses ``
+
+``USER STORY -- As a user I can login to the app so that I can use the features. ``
+
+
+
 **Base Setup User Stories**
 
 The following stories were implemented in order to set up a base structure for all the HTML pages and the core installations and configurations needed to run the application. While these do not show as individual features, they were stories completed that were needed to implement all of the stories above.
 
-``As a developer I can deploy the base project to heroku so that **I can complete the initial set up with all components( Postgres DB , Clodinary ,Github and Heroku. **``
+``USER STORY - As a developer I can deploy the base project to heroku so that **I can complete the initial set up with all components( Postgres DB , Clodinary ,Github and Heroku. **``
 
-``As a developer, I need to set up the project so that it is ready for implementing the core features``
+``USER STORY - As a developer, I need to set up the project so that it is ready for implementing the core features``
 
-``As a developer, I need to create the base.html page and structure so that other pages can reuse the layout ``
+``USER STORY - As a developer, I need to create the base.html page and structure so that other pages can reuse the layout ``
 
 
 
@@ -506,3 +516,7 @@ Most commonly, forks are used to either propose changes to someone else's projec
 - This will create a duplicate of the full project in your GitHub Repository.
 
 ## Credits 
+
+[Django docementation](https://docs.djangoproject.com/en/4.2/) helped to learn class based views and the usage of python modules.
+
+My mentor Gareth Mcgirr helped  with guidance, materials and advises throughout the project.
