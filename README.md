@@ -64,6 +64,12 @@ This epic is for all stories that relate to app authentication. Like create sign
 
 This epic is for all document related stories and tasks that are needed to document the software development lifecycle of the application. It aims to deliver quality documentation, explaining all stages of development and necessary information on running, deploying and using the application.
 
+Tasks:
+
+* Complete readme documentation
+* Write unti test cases
+* Complete testing documentation write up
+
 #### User Stories
 
 **EPIC 1 - Base Setup**
@@ -277,6 +283,35 @@ A delete button was added to the each booking. A user can delete his/her own boo
 
 ![Delete Booking](static/docs/readme_images/booking_delete.JPG)
 
+``USER-STORY - As a user I can read the FAQ with or without login so that I know about culture school.``
+
+Implementation:
+
+**Read FAQ**
+
+A user can navigate to the 'FAQ' tab and read all Q & A without login.
+
+![Read FAQ](static/docs/readme_images/read_faq.JPG)
+
+``USER-STORY - As a user I can ask question to culture school  so that I get more details about the school``
+
+**Ask FAQ**
+
+A user button implemented to open a form to post question to culture school.
+
+![Ask FAQ](static/docs/readme_images/ask_faq.JPG)
+
+``USER-STORY - As a superuser I can answer question in FAQ page so that **I can reply to user queries **``
+
+**Answer FAQ**
+
+A user button implemented for superuser to answer any questiones posted in faq page.
+
+![Answer FAQ](static/docs/readme_images/answer_faq.JPG)
+
+
+
+
 **Validate booking User Stories**
 
 The following stories were implemented in order to validate the user request to book a course.
@@ -316,7 +351,7 @@ A 403 error page has been implemented to provide feedback to the user when they 
 ![403 page](static/docs/readme_images/403.JPG)
 
 
-``USER STORY - As a developer* I should create 500.html so that unauthorised user access geta 'Access Forbidden' page``
+``USER STORY - As a developer I need to create 500.html so that users gets an option to redirect in case of internal server errors.``
 
 Implementation:
 
@@ -344,7 +379,7 @@ The database was designed to allow CRUD functionality to be available to registe
 Bookings are related to the course by a Foreign Key which allows the users to manage bookings attached to their accounts.
 
 
-![Entity Relationship Diagram]()
+![Entity Relationship Diagram](static/docs/readme_images/ERD.JPG)
 
 ### Security
 
@@ -353,14 +388,6 @@ Views were secured by using the django class based view mixin, UserPassesTextMix
 Environment variables were stored in an env.py for local development for security purposes to ensure no secret keys, api keys or sensitive information was added the the repository. In production, these variables were added to the heroku config vars within the project.
 
 ## The-Surface-Plane
-### Design
-
-### Colour-Scheme
-
-
-
-### Typography
-
 
 ### Imagery
 
