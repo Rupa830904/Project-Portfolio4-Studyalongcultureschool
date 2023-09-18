@@ -8,7 +8,7 @@ Ensure a user can sign up to the website
 
 Steps:
 
-1. Navigate to and click Register
+1. Navigate to [Home page]() and click Register
 2. Enter email, username and password 
 3. Click Sign up
 
@@ -27,7 +27,7 @@ Description:
 Ensure a user can log in once signed up
 
 Steps:
-1. Navigate to Login Page
+1. Navigate to [Home page]() and Login Page
 2. Enter login details. Created in previous test case
 3. Click login
 
@@ -67,13 +67,14 @@ Ensure a new booking can be created.
 
 Steps:
 
-1. Navigate to - Login if prompted.
-2. Enter the following:
+1. Navigate to 'Bookings' - Login if prompted.
+2. Click on 'Book a Course'.
+3. Enter the following:
     - Name: Rupa pal
     - Choose the course: Choos a course from drop down
     - Date: Date of Birth
     - Term: Check the box as applicaböe
-3. Click Create
+4. Click Create
 
 Expected:
 
@@ -133,7 +134,7 @@ Ensure a booking can be searched by super user..
 
 Steps:
 
-1. Navigate to booking page - Login as superuser.
+1. Login as superuser and navigate to booking page.
 2. Provide the 'Full name' in the search panel 'Find a Booking'.
 3. Click on Find.
 
@@ -176,8 +177,8 @@ Ensure a new course can be created
 
 Steps:
 
-1. Navigate to Course detail page - Login if prompted.
-2. Click on the 'create course' button below the page
+1. Login as superuser.
+2. Click on the 'create course' button below the page.
 3. Enter the follow details:
     - Title: Course Title
     - image: Course image
@@ -228,8 +229,8 @@ Description:
 Ensure a user can view the places left in a course.
 Steps:
 
-1. Navigate to Course detail page - Login if prompted.
-2. Click on the 'course' button below the page.
+1. Navigate to Course detail page.
+2. Click on the 'course' button below the page - Login if prompted
 3. A message is displayed with places left.
 
 Expected:
@@ -251,15 +252,15 @@ Ensure FAQ page is available to users.
 Steps:
 
 1. Navigate to the FAQ page.
-2. User should be able to read all Q& A.
+2. User should be able to read all Q & A.
 
 
 Expected:
 
-On FAQ page , user is able to read all the Q&A.
+On FAQ page , user is able to read all the Q & A.
 Actual:
 
-On FAQ page , user is able to read all the Q&A.
+On FAQ page , user is able to read all the Q & A.
 
 <hr>
 
