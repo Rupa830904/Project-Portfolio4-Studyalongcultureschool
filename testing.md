@@ -8,7 +8,7 @@ Ensure a user can sign up to the website
 
 Steps:
 
-1. Navigate to [Home page]() and click Register
+1. Navigate to [Home page](https://cultureschool-1a3ff85c7080.herokuapp.com/) and click Register
 2. Enter email, username and password 
 3. Click Sign up
 
@@ -27,7 +27,7 @@ Description:
 Ensure a user can log in once signed up
 
 Steps:
-1. Navigate to [Home page]() and Login Page
+1. Navigate to [Home page](https://cultureschool-1a3ff85c7080.herokuapp.com/) and Login Page
 2. Enter login details. Created in previous test case
 3. Click login
 
@@ -329,10 +329,6 @@ All navigation links directed to the corect pages as expected.
 
 <hr>
 
-**Footer**
-
-Testing was performed on the footer links by clicking the font awesome icons and ensuring that the facebook icon opened facebook in a new tab and the twitter icon opened twitter in a new tab. These behaved as expected.
-
 ## Negative Testing
 
 Tests were performed on the create booking to ensure that:
@@ -382,9 +378,7 @@ To test the validation on the files, open the page to validate, right click and 
 ![HTML Validator7](static/docs/testing_images/Html_validator_post_faq.JPG)
 ![HTML Validator8](static/docs/testing_images/Html_validator_ans_faq.JPG)
 
-All pages were run through the official [Pep8](http://pep8online.com/) validator to ensure all code was pep8 compliant. Some errors were shown due to blank spacing and lines too long, 1 line instead of 2 expected. All of these errors were resolved and code passed through validators with the exception of the settings.py file.
-
-The django auto generated code for AUTH_PASSWORD_VALIDATORS were showing up as lines too long. I could not find a way to split these lines but since they were auto generated and not my own custom code, I hope this is acceptable.
+All pages were run through the pycodestyle validator , to ensure all code was pep8 compliant. Some errors were shown due to blank spacing and lines too long, 1 line instead of 2 expected. All of these errors were resolved and code passed through pycodestyle check with the exception of the settings.py file.
 
 ![PEP8](static/docs/testing_images/PEP8_validation.JPG)
 
