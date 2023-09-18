@@ -42,7 +42,7 @@ The stand alone pages epic is for small pages that did not have enough stories t
 
 **EPIC 3 - Course**
 
-The course epic is for all stories that relate to the creating, editing and viewing of courses. This allows for regular users to view menus and for admin to manage them with a simple UI interface.
+The course epic is for all stories that relate to the creating, editing and viewing of courses. This allows for regular users to view courses and for admin to manage them with a simple UI interface.
 
 **EPIC 4 - Booking**
 
@@ -67,7 +67,7 @@ This epic is for all document related stories and tasks that are needed to docum
 Tasks:
 
 * Complete readme documentation
-* Write unti test cases
+* Write unit test cases
 * Complete testing documentation write up
 
 #### User Stories
@@ -87,13 +87,13 @@ As a developer I can deploy the base project to heroku so that **I can complete 
 
 As a developer, I should create 404.html so that if the user is prompted with a redirect message when landed on a non-existent page.
 
-As a developer, I should create 403.html so that unauthorised user access geta 'Access Forbodden'.
+As a developer, I should create 403.html so that unauthorised user access get an 'Access Forbodden'.
 
 As a developer I need to create 500.html so that users gets an option to redirect in case of internal server errors.
 
 **EPIC 3 - Course**
 
-As a site user I can read the details os a course so that I can choose to book.
+As a site user I can read the details of a course so that I can choose to book.
 
 As a Superuser I can create new courses so that I can manage my school courses.
 
@@ -115,11 +115,11 @@ As a user I get the confirmation messages for booking operations so that I know 
 
 As a superuser I can search a booking with Full name so that I can see the bookings detail.
 
-As a superuser I can EDIT or DELETE the booking after I search and find the booking so that I can change the booking is necessary.
+As a superuser I can EDIT or DELETE the booking after I search and find the booking so that I can change the booking if necessary.
 
 **EPIC 5 - FAQ**
 
-As a userr I can ask question to culture school ** so that I get more details about the school.
+As a user I can ask question to culture school ** so that I get more details about the school.
 
 As a user I can read the FAQ with or without login so that I know about culture school.
 
@@ -138,7 +138,7 @@ As a developer I must validate the new booking against the existing booking so t
 
 As a Site User I can sign up to culture school so that I can book courses*.
 
-As a user I can login to teh app so that I can use the features.
+As a user I can login to the app so that I can use the features.
 
 **EPIC 8 - Documentation**
 
@@ -150,7 +150,7 @@ As a developer, I write readme.md so that all the whole project is well explaine
 ## The-Scope-Plane
 
 * Responsive Design - Site should be fully functional on all devices from 320px up
-* Ability to perform CRUD functionality on Menus and Bookings
+* Ability to perform CRUD functionality on Courses and Bookings
 * Restricted role based features for regular users and admins
 * Home page with courses information
 
@@ -169,17 +169,15 @@ The navigation option is displayed on all pages . This will allow users to view 
 
 ![Navbar](static/docs/readme_images/Navbar.JPG)
 
-``USER STORY - As a site user I can read the details os a course so that I can choose to book``
+``USER STORY - As a site user I can read the details of a course so that I can choose to book``
 
 Implementation:
 
 **Course Page**
 
-The course page contains a imahge and the title of the available courses. It also provides a link below each course title. On use click it opens a new page with course details.
+The course page contains a image and the title of the available courses. It also provides a link below each course title. On use click it opens a new page with course details.
 
-Under the information section are two buttons, 'Make a booking' and 'View Menus'. These buttons will allow the user a quick way to the respective pages if they wish to make a booking or view the restaurants active menus.
-
-The last section of the home page contains a google map, marking the location of the restaurant and the opening hours of the restaurant. This will allow the user to locate the restaurant and operating times.
+Under each course card there is link with course title. Clicking on the link , user is redirected to the course details page. It gives informations about teacher name , date place etc.
 
 ![Course](static/docs/readme_images/course.JPG)
 
@@ -194,7 +192,7 @@ The last section of the home page contains a google map, marking the location of
 
 Implementation:
  
-A superuser will get am EDIT button on course detail page. the button will redirect to the course form where Place , Teacher , Description and Course start date can be edited.
+A superuser will get an EDIT button on course detail page. the button will redirect to the course form where Place , Teacher , Description and Course start date can be edited.
 
 ![Course Details](static/docs/readme_images/edit_course.JPG)
 
@@ -204,7 +202,7 @@ A superuser will get am EDIT button on course detail page. the button will redir
 
 Implementation:
 
-A create course button was implemented to allow teh super user to create new course. It allows to populate all attributes of the course.
+A create course button was implemented to allow the super user to create new course. It allows to populate all attributes of the course.
 
 ![Create Course](static/docs/readme_images/create_course.JPG)
 
@@ -242,7 +240,7 @@ A manage my bookings button was implemented, On clicking this button , It displa
 
 ![Manage Bookings Page](static/docs/readme_images/manage_booking.JPG)
 
-``USER-STORY - As a As a user I get the confirmation messages for booking operations so that I know the operation is successf``
+``USER-STORY - As a As a user I get the confirmation messages for booking operations so that I know the operation is successful``
 
 Implementation:
 
@@ -258,7 +256,7 @@ Implementation:
 
 **Search a Booking**
 
-A serach box is available for superuser to search any bookings. After entering the Full Name and click on Find , the booking details is diaplayed eith EDIT/DELETE option.
+A serach box is available for superuser to search any bookings. After entering the Full Name and click on Find , the booking details is displayed eith EDIT/DELETE option.
 
 ![Search Box](static/docs/readme_images/search_booking.JPG)
 
